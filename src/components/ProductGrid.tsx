@@ -1,6 +1,6 @@
 "use client";
 import { Product } from "@/types/product";
-import { use, useState } from "react";
+import {  useState } from "react";
 
 const Product_Per_Page = 6;
 
