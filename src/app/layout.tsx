@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
-import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,6 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={` h-full antialiased`}>
+      
       <body className="min-h-full flex flex-col">
         <Header />
         {children}
