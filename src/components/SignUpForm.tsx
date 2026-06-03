@@ -1,60 +1,9 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import React, { useState } from 'react'
+
 
 export default function SignUpForm() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
+ 
 
-  //const dispatch = useAppDispatch();
-  //const existingUsers = useAppSelector((state) => state.users.users);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-
-    // Validation
-    if (!firstName || !lastName || !email || !password) {
-      setError("All fields are required");
-      return;
-    }
-
-    if (!email.includes("@")) {
-      setError("Please enter a valid email");
-      return;
-    }
-
-    if (password.length < 6) {
-      setError("Password must be at least 6 characters");
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      return;
-    }
-
-    // // Check if email already exists (RTK)
-    // if (existingUsers.find((u) => u.email === email)) {
-    //   setError("Email already registered");
-    //   return;
-    // }
-
-    // // Simulate API delay
-    // setLoading(true);
-    // setTimeout(() => {
-    //   // Save to RTK
-    //   dispatch(addUser({ firstName, lastName, email, password }));
-    //   setLoading(false);
-    //   router.push("/login?registered=true");
-    // }, 800);
-  };
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="p-10! border-2 border-amber-600 w-96">

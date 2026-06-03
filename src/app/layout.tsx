@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
+import StoreProvider from "@/storeProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +17,10 @@ export default function RootLayout({
     <html lang="en" className={` h-full antialiased`}>
       
       <body className="min-h-full flex flex-col">
+        <StoreProvider>          
         <Header />
         {children}
+      </StoreProvider>
       </body>
     </html>
   );
