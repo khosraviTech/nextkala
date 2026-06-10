@@ -1,14 +1,13 @@
-import ProductGrid from "@/components/ProductGrid";
+import ProductGrid from "@/components/ProductList";
 
 export default async function Home() {
   
-  const res = await fetch("http://localhost:3000/data/products.json");
-  const data = await res.json();
+  
 
   return (
     <main >
       <h1 className="text-center">All Products:</h1>
-      <ProductGrid products={data.products} />
+      <ProductList />
     </main>
   );
 }
