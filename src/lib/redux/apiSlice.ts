@@ -6,7 +6,7 @@ export const apiSlice = createApi({
   reducerPath: "api",
 
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://fakestoreapi.com/",
+    baseUrl: "https://dummyjson.com/",
   }),
 
   endpoints: (builder) => ({

@@ -4,7 +4,7 @@ import {  useState } from "react";
 
 const Product_Per_Page = 6;
 
-export default function ProductList({ products }: { products: Product[] }) {
+export default function ProductList() {
   //page 1 -> [0-6)
   //page 2 -> [6-12)
   //...

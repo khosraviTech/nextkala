@@ -1,13 +1,20 @@
-import ProductGrid from "@/components/ProductList";
+import ProductList from "@/components/ProductList";
 
 export default async function Home() {
   
-  
+   const products = await fetch(
+    "https://fakestoreapi.com/products"
+  ).then(res => res.json());
+
+  const categories = await fetch(
+    "https://fakestoreapi.com/products/categories"
+  ).then(res => res.json());
 
   return (
     <main >
       <h1 className="text-center">All Products:</h1>
-      <ProductList />
+      <ProductList products={products}
+        categories={categories}  />
     </main>
   );
 }
