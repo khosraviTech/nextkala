@@ -1,10 +1,12 @@
 "use client";
+import { Heart } from "lucide-react";
 import { Product } from "@/types/product";
-import {  useState } from "react";
-
+import { useState } from "react";
+import { ShoppingCart } from "lucide-react";
+import Image from "next/image";
 const Product_Per_Page = 6;
 
-export default function ProductList() {
+export default function ProductList({ products }: { products: Product[] }) {
   //page 1 -> [0-6)
   //page 2 -> [6-12)
   //...
@@ -27,24 +29,38 @@ export default function ProductList() {
   return (
     <>
       {/* products in selected page */}
-      
-        <div className="flex flex-wrap justify-center gap-6">
+
+      <div className="flex flex-wrap justify-center gap-6">
         {paginatedProducts.map((product) => (
           <div
             key={product.id}
             className="text-amber-50 text-center  bg-blue-950 p-5 outline-0 border-2 border-blue-950 rounded-3xl shadow-2xl  "
           >
+            <div>
+              <Image
+                src={product.images[0]}
+                alt={`${product.title} image`}
+                width={300}
+                height={300}
+              />
+            </div>
             <h1>{product.title}</h1>
             <h2>{product.price}</h2>
-            <h3>⭐{product.rating.rate}</h3>
+            <h3>⭐{product.rating}</h3>
+
+            <button className="flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
+              <ShoppingCart size={18} />
+              Add to Cart
+            </button>
+
+            <button className="p-2 rounded-full hover:bg-gray-100">
+              <Heart className="h-5 w-5" />
+            </button>
           </div>
         ))}
       </div>
 
-      
-      
-
-      {/* buttons */}
+      {/*Pagination buttons */}
       <div className="text-center">
         {/* prev button */}
 
