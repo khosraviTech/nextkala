@@ -1,4 +1,5 @@
 "use client";
+import { DollarSign } from "lucide-react";
 import { Heart } from "lucide-react";
 import { Product } from "@/types/product";
 import { useState } from "react";
@@ -45,7 +46,7 @@ export default function ProductList({ products }: { products: Product[] }) {
               />
             </div>
             <h1>{product.title}</h1>
-            <h2>{product.price}</h2>
+            <h2 className="flex justify-center"><DollarSign className="size-5"/>{product.price}</h2>
             <h3>⭐{product.rating}</h3>
 
             <button className="flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
