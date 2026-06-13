@@ -2,25 +2,22 @@
 
 
 @theme {
-  
-  --primary: #3B82F6;     
-  --blue-icons: #2563EB; 
-  
-  --bg-dark: #0F172A;    
-  --bg-light: #F8FAFC;     
-  --bg-card: #1E293B;      
-  
-  --text-primary: #F1F5F9; 
-  --text-secondary: #94A3B8; 
-  --text-dark: #0F172A;      
-  
-  --accent-green: #10B981;        /* green*/
-  --warning-orange: #F59E0B;       /* Orange*/
-  
-  --border: #334155;
-  --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-}
+  --color-bg-dark: #0F172A;
+  --color-bg-light: #F8FAFC;
+  --color-bg-card: #1E293B;
 
+  --color-primary: #3B82F6;
+  --color-primary-dark: #2563EB;
+
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-dark: #0F172A;
+
+  --color-accent-green: #10B981;
+  --color-warning-orange: #F59E0B;
+
+  --color-border: #334155;
+}
 html, body {
   height: 100%;
   margin: 0;
