@@ -2,21 +2,17 @@
 
 
 @theme {
-  --color-bg-dark: #0F172A;
-  --color-bg-light: #F8FAFC;
-  --color-bg-card: #1E293B;
+  --color-bg-dark: #021738;
+  --color-bg-card: #06121c;
 
-  --color-primary: #3B82F6;
-  --color-primary-dark: #2563EB;
+  --color-primary: #ededf1;
+  --color-secondary: #d2d4d4;
+  
 
-  --color-text-primary: #F1F5F9;
-  --color-text-secondary: #94A3B8;
-  --color-text-dark: #0F172A;
+  --color-accent-green: #4dc756;
+  --color-warning-orange: #dfab41;
 
-  --color-accent-green: #10B981;
-  --color-warning-orange: #F59E0B;
-
-  --color-border: #334155;
+  --color-border: #57634e;
 }
 html, body {
   height: 100%;
