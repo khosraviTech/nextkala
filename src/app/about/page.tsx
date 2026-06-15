@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       <div className="bg-bg-dark">
-        {/* <Title /> */}
+        <Title />
         <AboutMe/>
       </div>
     </>
