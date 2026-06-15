@@ -37,10 +37,10 @@ export default function Title() {
           and performance.
         </h3>
         {/* btn */}
-        <button className="mt-3 row-start-6 row-end-7 col-start-6 col-end-9 inline-flex items-center  gap-2 leading-tight p-4 text-xl bg-warning-orange text-black border-2 rounded-full text-center ">
+        <button className="mt-3 row-start-6 row-end-7 col-start-6 col-end-9 inline-flex w-full items-center justify-between   gap-2 leading-tight p-4 text-xl bg-warning-orange text-black border-2 rounded-full text-center ">
           Download CV <Download />{" "}
         </button>
-        <button className=" mt-3 row-start-6 row-end-7 col-start-9 col-end-12 inline-flex  items-center  gap-5 leading-tight p-4 text-xl bg-bg-dark border-accent-green border-2 rounded-full text-center  text-secondary">
+        <button className=" mt-3 row-start-6 row-end-7 col-start-9 col-end-12 inline-flex  w-full items-center justify-between  gap-5 leading-tight p-4 text-xl bg-bg-dark border-accent-green border-2 rounded-full text-center  text-secondary">
           Contact Me <ArrowRight className=" scale-100 text-accent-green" />
         </button>
       </div>
