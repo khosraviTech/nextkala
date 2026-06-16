@@ -2,9 +2,9 @@ import { Target } from "lucide-react";
 import { Wallet, ChartColumn, ShoppingCart, Brain } from "lucide-react";
 export default function CurrentFocus() {
   return (
-    <div className="border border-purple-500 grid grid-rows-12 grid-cols-12 p-6 gap-6 ">
+    <div className="h-100 border border-purple-500 grid grid-rows-12 grid-cols-12 p-6 gap-6 ">
       {/* title of section */}
-      <div className="row-start-1 row-end-2 col-start-1 col-end-12 inline-flex items-center gap-2 text-3xl ">
+      <div className="row-start-1 row-end-2 col-start-1 col-end-12 inline-flex items-center gap-5 text-3xl ">
         <Target className="scale-150 text-accent-green shrink-0" />
         <h1 className="text-accent-green">Current Focus</h1>
       </div>
