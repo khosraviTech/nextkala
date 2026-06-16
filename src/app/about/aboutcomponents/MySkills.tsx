@@ -15,6 +15,18 @@ const skills: skill[] = [
   { name: "Tailwind CSS", logoSrc: "/skillLogo/tailwind-css-icon.svg" },
 ];
 
+type tool = {
+  name: string;
+  logoSrc: string;
+};
+const tools: tool[] = [
+  { name: "Git", logoSrc: "/toolLogo/git-icon.svg" },
+  { name: "GitHub", logoSrc: "/toolLogo/github-white-icon.svg" },
+  { name: "VS Code", logoSrc: "/toolLogo/vsCode-icon.svg" },
+  { name: "Ubuntu", logoSrc: "/toolLogo/Ubuntu-color-icon.svg" },
+  { name: "Redux ToolKit", logoSrc: "/toolLogo/redux-icon.svg" },
+];
+
 export default function MySkills() {
   return (
     <div className="p-6">
@@ -25,7 +37,7 @@ export default function MySkills() {
       </div>
 
       {/* Front-end Section */}
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap items-center gap-6">
         {skills.map((skill) => (
           <div key={skill.name} className="flex flex-col items-center flex-wrap">
             <Image
@@ -33,7 +45,7 @@ export default function MySkills() {
               width={60}
               height={60}
               alt="an image"
-              className=""
+              className="p-2"
             />
 
             <h3 className="text-xl text-secondary">{skill.name}</h3>
@@ -48,13 +60,20 @@ export default function MySkills() {
 
       {/* Tools */}
 
-      <div>
-        <h3 className="text-xl text-secondary">Git</h3>
-        <h3 className="text-xl text-secondary">GitHub</h3>
-        <h3 className="text-xl text-secondary">VS Code</h3>
-        <h3 className="text-xl text-secondary">Ubuntu</h3>
-        <h3 className="text-xl text-secondary">Redux ToolKit</h3>
-        <h3 className="text-xl text-secondary">RTK Query</h3>
+     <div className="flex flex-wrap items-center gap-6">
+        {tools.map((tool) => (
+          <div key={tool.name} className="flex flex-col items-center flex-wrap">
+            <Image
+              src={tool.logoSrc}
+              width={60}
+              height={60}
+              alt="an image"
+              className="p-2"
+            />
+
+            <h3 className="text-xl text-secondary">{tool.name}</h3>
+          </div>
+        ))}
       </div>
 
       {/* Divider line */}
