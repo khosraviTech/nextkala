@@ -1,5 +1,6 @@
 import { Target } from "lucide-react";
 import { Wallet, ChartColumn, ShoppingCart, Brain } from "lucide-react";
+
 export default function CurrentFocus() {
   return (
     <div className="h-100 border border-purple-500 grid grid-rows-12 grid-cols-12 p-6 gap-6 ">
