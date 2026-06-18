@@ -5,7 +5,7 @@ import { Download } from "lucide-react";
 
 export default function Title() {
   return (
-    <>
+    
       <div className=" grid grid-cols-12 grid-rows-7 gap-3 p-6 border-blue-500 border-2">
         {/* image  */}
         <div className=" row-start-2 row-end-12 col-start-1 col-end-6 w-75 h-75 rounded-full overflow-hidden border-2 border-blue-950 shadow-lg">
@@ -44,6 +44,6 @@ export default function Title() {
           Contact Me <ArrowRight className=" scale-100 text-accent-green" />
         </button>
       </div>
-    </>
+    
   );
 }

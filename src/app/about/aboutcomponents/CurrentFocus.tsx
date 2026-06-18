@@ -1,10 +1,11 @@
-import { Target } from "lucide-react";
-import { Wallet, ChartColumn, ShoppingCart, Brain } from "lucide-react";
+import { Target, Wallet, ChartColumn, ShoppingCart, Brain } from "lucide-react";
 import { ReactNode } from "react";
+
 type CurrentLearning = {
   name: string;
 };
-const Currentlearnings: CurrentLearning[] = [
+
+const currentLearnings: CurrentLearning[] = [
   { name: "Next.js" },
   { name: "React" },
   { name: "Tailwind CSS" },
@@ -13,71 +14,77 @@ const Currentlearnings: CurrentLearning[] = [
   { name: "TypeScript" },
   { name: "JavaScript" },
 ];
-type FutureIntrest = {
+
+type FutureInterest = {
   name: string;
-  iconSrc: ReactNode;
+  icon: ReactNode;
 };
-const FutureIntrests: FutureIntrest[] = [
+
+const futureInterests: FutureInterest[] = [
   {
-    name: "Future Interests",
-    iconSrc: <Wallet className=" text-accent-green" />,
+    name: "Finance",
+    icon: <Wallet className="text-accent-green" />,
   },
   {
     name: "Data Analysis",
-    iconSrc: <ChartColumn className=" text-accent-green" />,
+    icon: <ChartColumn className="text-accent-green" />,
   },
   {
     name: "E-commerce",
-    iconSrc: <ShoppingCart className=" text-accent-green" />,
+    icon: <ShoppingCart className="text-accent-green" />,
   },
   {
-    name: "Artificial Intelligences",
-    iconSrc: <Brain className=" text-accent-green" />,
+    name: "Artificial Intelligence",
+    icon: <Brain className="text-accent-green" />,
   },
 ];
 
 export default function CurrentFocus() {
   return (
-    <div className="h-100 border border-purple-500 grid grid-rows-12 grid-cols-12 p-6 gap-6 ">
-      {/* title of section */}
-      <div className="row-start-1 row-end-2 col-start-1 col-end-12 inline-flex items-center gap-5 text-3xl ">
-        <Target className="scale-150 text-accent-green shrink-0" />
-        <h1 className="text-accent-green">Current Focus</h1>
+    <div className="border border-purple-500 rounded-2xl p-6 grid grid-cols-12 gap-6">
+      {/* Title */}
+      <div className="col-span-12 flex items-center gap-4">
+        <Target className="text-accent-green" size={28} />
+
+        <h1 className="text-3xl text-accent-green font-semibold">
+          Current Focus
+        </h1>
       </div>
 
       {/* Currently Learning */}
-
-      <div className="row-start-2 row-end-3 col-start-1 col-end-6">
-        <h2 className="text-accent-green text-2xl mb-4 mt-3">
+      <div className="col-span-5">
+        <h2 className="text-accent-green text-2xl mb-6">
           Currently Learning
         </h2>
 
-        <ul className="list-disc pl-6 marker:text-accent-green text-xl space-y-3">
-          {Currentlearnings.map((laerned) => (
-            <li key={laerned.name} className=" text-primary">
-              {laerned.name}
+        <ul className="list-disc pl-6 marker:text-accent-green space-y-3">
+          {currentLearnings.map((item) => (
+            <li key={item.name} className="text-primary text-lg">
+              {item.name}
             </li>
           ))}
         </ul>
       </div>
 
-      {/* Divider line */}
-      <div className=" row-start-2 row-end-12 col-start-6 col-end-7 flex justify-center mt-8">
-        <div className="w-px h-70 bg-gray-500"></div>
+      {/* Divider */}
+      <div className="col-span-1 flex justify-center">
+        <div className="w-px bg-gray-500 self-stretch" />
       </div>
-      {/* Future Interests  */}
-      <div className="row-start-2 row-end-3 col-start-7 col-end-12 ">
-        <h2 className="text-accent-green text-2xl mb-4 mt-3">
+
+      {/* Future Interests */}
+      <div className="col-span-6">
+        <h2 className="text-accent-green text-2xl mb-6">
           Future Interests
         </h2>
 
-        <ul className=" text-xl space-y-13">
-          {FutureIntrests.map((FutureIntrest) => (
+        <ul className="space-y-4">
+          {futureInterests.map((item) => (
             <li
-              key={FutureIntrest.name}
-              className=" text-primary flex items-center gap-2"
+              key={item.name}
+              className="flex items-center gap-3 text-primary text-lg"
             >
-              {FutureIntrest.iconSrc} {FutureIntrest.name}
+              {item.icon}
+              {item.name}
             </li>
           ))}
         </ul>
