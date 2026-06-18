@@ -1,6 +1,7 @@
 import AboutMe from "./aboutcomponents/AboutMe";
-import ContactMe from "./aboutcomponents/ContactMe";
+import GetInTouch from "./aboutcomponents/GetInTouch";
 import CurrentFocus from "./aboutcomponents/CurrentFocus";
+import Education from "./aboutcomponents/Education";
 import MySkills from "./aboutcomponents/MySkills";
 import Title from "./aboutcomponents/Title";
 
@@ -9,10 +10,11 @@ export default function About() {
     <>
       <div className="bg-bg-dark">
         <Title />
-        <AboutMe/>
-        <CurrentFocus/>
-        <MySkills/>
-        <ContactMe/>
+        <Education />
+        <AboutMe />
+        <CurrentFocus />
+        <MySkills />
+        <GetInTouch />
       </div>
     </>
   );

@@ -40,16 +40,14 @@ const connections: connection[] = [
     link: "",
   },
 ];
-export default function ContactMe() {
+export default function GetInTouch() {
   return (
     <div className="grid grid-rows-1 grid-cols-5 gap-6  border-2 border-b-fuchsia-500 p-6">
       {/* title */}
       <div className=" row-start-1 row-end-1 col-start-1 col-end-1 text-3xl leading-tight ">
         <span className="flex flex-col items-center space-y-3">
-
-
           <span className="inline-flex items-center gap-3">
-            <AtSign className="scale-150  text-accent-green shrink-0" />
+            <AtSign className="scale-130  text-accent-green shrink-0 whitespace-nowrap" />
             <h1 className=" text-primary whitespace-nowrap ">Get in Touch</h1>
           </span>
 
@@ -57,8 +55,6 @@ export default function ContactMe() {
             Feel free to reach out for collaboration, networking, or just to say
             hello.
           </h3>
-
-
         </span>
       </div>
 
