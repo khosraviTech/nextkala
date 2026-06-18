@@ -1,0 +1,94 @@
+import { AtSign } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+
+type connection = {
+  name: string;
+  address: string;
+  iconSrc: string;
+  link: string;
+};
+const connections: connection[] = [
+  {
+    name: "Email",
+    address: "amirmohkhosravi@gmail.com",
+    iconSrc: "/contactLogo/gmail-icon.svg",
+    link: "",
+  },
+  {
+    name: "GitHub",
+    address: "khosraviTech",
+    iconSrc: "/toolLogo/github-white-icon.svg",
+    link: "https://github.com/khosraviTech",
+  },
+  {
+    name: "Linkdin",
+    address: "Linkdin address",
+    iconSrc: "/contactLogo/linkedin-app-icon.svg",
+    link: "",
+  },
+  {
+    name: "Telegram",
+    address: "Telegram address",
+    iconSrc: "/contactLogo/telegram-icon.svg",
+    link: "",
+  },
+  {
+    name: "Bale",
+    address: "Bale address",
+    iconSrc: "/contactLogo/Bale-green.svg",
+    link: "",
+  },
+];
+export default function ContactMe() {
+  return (
+    <div className="grid grid-rows-1 grid-cols-5 gap-6  border-2 border-b-fuchsia-500 p-6">
+      {/* title */}
+      <div className=" row-start-1 row-end-1 col-start-1 col-end-1 text-3xl leading-tight ">
+        <span className="flex flex-col items-center space-y-3">
+
+
+          <span className="inline-flex items-center gap-3">
+            <AtSign className="scale-150  text-accent-green shrink-0" />
+            <h1 className=" text-primary whitespace-nowrap ">Get in Touch</h1>
+          </span>
+
+          <h3 className="text-secondary text-sm">
+            Feel free to reach out for collaboration, networking, or just to say
+            hello.
+          </h3>
+
+
+        </span>
+      </div>
+
+      <div className="row-start-1 row-end-1 col-start-2 col-end-5 flex flex-wrap gap-4">
+        {connections.map((connection) => (
+          <div
+            key={connection.name}
+            className=" border border-border rounded-2xl text-primary   p-3"
+          >
+            <Link href={connection.link}>
+              <div className="inline-flex items-center gap-2">
+                <Image
+                  src={connection.iconSrc}
+                  width={30}
+                  height={30}
+                  alt="Picture of the Khosravi"
+                  className=""
+                />
+                {/* name and addres flex-col */}
+                <div className="flex flex-col items-center">
+                  <span>{connection.name}</span>
+                  <span className="text-secondary text-sm">
+                    {connection.address}
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
