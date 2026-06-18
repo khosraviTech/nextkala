@@ -42,13 +42,13 @@ const connections: connection[] = [
 ];
 export default function GetInTouch() {
   return (
-    <div className="grid grid-rows-1 grid-cols-5 gap-6  border-2 border-b-fuchsia-500 p-6">
+    <div className="h-full grid grid-cols-12 gap-6  border-2 border-fuchsia-500 p-6">
       {/* title */}
-      <div className=" row-start-1 row-end-1 col-start-1 col-end-1 text-3xl leading-tight ">
-        <span className="flex flex-col items-center space-y-3">
+      <div className=" col-span-4 text-3xl flex-col items-center  leading-tight mr-3 ">
+        <span className=" space-y-3">
           <span className="inline-flex items-center gap-3">
             <AtSign className="scale-130  text-accent-green shrink-0 whitespace-nowrap" />
-            <h1 className=" text-primary whitespace-nowrap ">Get in Touch</h1>
+            <h1 className=" text-primary ">Get in Touch</h1>
           </span>
 
           <h3 className="text-secondary text-sm">
@@ -58,11 +58,15 @@ export default function GetInTouch() {
         </span>
       </div>
 
-      <div className="row-start-1 row-end-1 col-start-2 col-end-5 flex flex-wrap gap-4">
+
+
+
+      {/* Connectino links */}
+      <div className="col-span-8 flex flex-wrap gap-4">
         {connections.map((connection) => (
           <div
             key={connection.name}
-            className=" border border-border rounded-2xl text-primary   p-3"
+            className=" border border-border rounded-2xl text-primary p-3"
           >
             <Link href={connection.link}>
               <div className="inline-flex items-center gap-2">

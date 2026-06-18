@@ -5,16 +5,16 @@ import { UserRound } from "lucide-react";
 
 export default function AboutMe() {
   return (
-    <div className=" grid  border-2 grid-rows-9 grid-cols-11 gap-3 p-6 border-red-500 ">
+    <div className="h-full grid border grid-cols-12 gap-6 p-6 border-red-500 rounded-2xl">
   {/* About Me Title */}
-      <div className="row-start-1 row-end-2 col-start-1 col-end-3 inline-flex items-center gap-4 text-3xl">
+      <div className="col-span-12 inline-flex items-center gap-4 text-3xl">
         <UserRound className="scale-150 text-accent-green shrink-0" />
         <h1 className="text-primary whitespace-nowrap ">About Me</h1>
       </div>
 
 
 
-      <h3 className="row-start-2 row-end-5 col-start-1 col-end-11 text-secondary">
+      <h3 className="col-span-12 text-secondary">
         I&apos;m a passionate front-end developer who loves turning ideas into
         real products. I&apos;m constantly learning and exploring new
         technologies to solve real-world problems.
@@ -22,7 +22,7 @@ export default function AboutMe() {
 
 
 
-      <div className="row-start-5 row-end-8 col-start-1 col-end-4">
+      <div className="row-span-3 col-span-12">
         <Image
           src="/signiture.png"
           width={100}
@@ -31,7 +31,7 @@ export default function AboutMe() {
           className="overflow-hidden "
         />
       </div>
-      <button className="row-start-7 row-end-9 col-start-6 col-end-11 text-primary text-sm inline-flex w-full items-center justify-between border pl-4 border-accent-green rounded-2xl p-2">
+      <button className=" col-start-7 col-end-12 text-primary text-sm inline-flex w-full items-center justify-between border pl-4 border-accent-green rounded-2xl p-2">
   More About Me
   <ArrowRight className="scale-90 text-accent-green" />
 </button>

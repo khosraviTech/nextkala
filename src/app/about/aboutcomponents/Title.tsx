@@ -1,49 +1,60 @@
-import React from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { Download } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 export default function Title() {
   return (
-    
-      <div className=" grid grid-cols-12 grid-rows-7 gap-3 p-6 border-blue-500 border-2">
-        {/* image  */}
-        <div className=" row-start-2 row-end-12 col-start-1 col-end-6 w-75 h-75 rounded-full overflow-hidden border-2 border-blue-950 shadow-lg">
+    <div className="grid grid-cols-12 gap-6 p-6 border-2 border-blue-500 rounded-2xl">
+      {/* Image */}
+      <div className="col-span-5 flex items-center justify-center">
+        <div className="w-75 h-75 rounded-full overflow-hidden border-2 border-blue-950 shadow-lg">
           <Image
             src="/khosravi_cap.jpg"
-            width={100}
-            height={100}
-            alt="Picture of the Khosravi"
-            className="object-cover w-full h-full"
+            width={300}
+            height={300}
+            alt="Picture of Amir Mohammad Khosravi"
+            className="w-full h-full object-cover"
           />
         </div>
+      </div>
 
-        {/* text */}
-        <h3 className="row-start-1 row-end-2 col-start-6 col-end-8 text-xl text-accent-green">
+      {/* Content */}
+      <div className="col-span-7 flex flex-col justify-center gap-4">
+        <h3 className="text-xl text-accent-green">
           👋 Hi, I&apos;m
         </h3>
-        <h1 className="row-start-2 row-end-3 col-start-6 col-end-12 text-6xl text-primary leading-tight whitespace-nowrap">
+
+        <h1 className="text-6xl text-primary leading-tight whitespace-nowrap">
           Amir Mohammad
         </h1>
-        <h1 className="row-start-3 row-end-4 col-start-6 col-end-12 text-6xl text-warning-orange">
+
+        <h1 className="text-6xl text-warning-orange leading-tight">
           Khosravi
         </h1>
-        <h3 className="row-start-4 row-end-5 col-start-6 col-end-12 text-2xl text-accent-green">
-          <span className="font-bold text-2xl text-warning-orange">|</span>{" "}
+
+        <h3 className="text-2xl text-accent-green">
+          <span className="font-bold text-warning-orange">|</span>{" "}
           Front-End Developer
         </h3>
-        <h3 className=" row-start-5 row-end-6 col-start-6 col-end-12 text-xl text-secondary">
-          I build modern and scalable web applications with a focus on usability
-          and performance.
-        </h3>
-        {/* btn */}
-        <button className="mt-3 row-start-6 row-end-7 col-start-6 col-end-9 inline-flex w-full items-center justify-between   gap-2 leading-tight p-4 text-xl bg-warning-orange text-black border-2 rounded-full text-center ">
-          Download CV <Download />{" "}
-        </button>
-        <button className=" mt-3 row-start-6 row-end-7 col-start-9 col-end-12 inline-flex  w-full items-center justify-between  gap-5 leading-tight p-4 text-xl bg-bg-dark border-accent-green border-2 rounded-full text-center  text-secondary">
-          Contact Me <ArrowRight className=" scale-100 text-accent-green" />
-        </button>
+
+        <p className="text-xl text-secondary">
+          I build modern and scalable web applications with a focus on
+          usability and performance.
+        </p>
+
+        <div className="flex gap-4 pt-2">
+          <button className="flex-1 inline-flex items-center justify-between p-4 text-xl bg-warning-orange text-black rounded-full">
+            Download CV
+            <Download />
+          </button>
+
+          <button className="flex-1 inline-flex items-center justify-between p-4 text-xl bg-bg-dark border-2 border-accent-green rounded-full text-secondary">
+            Contact Me
+            <ArrowRight className="text-accent-green" />
+          </button>
+        </div>
+
+        
       </div>
-    
+    </div>
   );
 }

@@ -7,7 +7,7 @@ import Title from "./aboutcomponents/Title";
 
 export default function About() {
   return (
-    <div className="grid grid-cols-12 items-start gap-6 bg-bg-dark">
+    <div className="grid grid-cols-12 gap-6 bg-bg-dark ">
   <div className="col-span-8">
     <Title />
   </div>

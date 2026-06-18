@@ -4,15 +4,15 @@ import { Calendar } from "lucide-react";
 
 export default function Education() {
   return (
-    <div className="border-2 border-b-amber-400">
+    <div className="h-full grid grid-cols-6 border-2 border-amber-400 rounded-2xl p-6">
       {/* title & icon */}
-      <div className="mb-3 text-3xl inline-flex items-center gap-3 leading-tight">
+      <div className="col-span-12 mb-3 text-3xl inline-flex items-center gap-3 leading-tight">
         <GraduationCap className="scale-150 text-accent-green" />
         <h1 className="text-primary">Education</h1>
       </div>
 
       
-      <div className="flex flex-col items-center gap-2">
+      <div className="col-span-12 flex flex-col items-center gap-2">
         {/* Image & University info */}
         <Image
           src="/University_of_Tehran_logo.svg"

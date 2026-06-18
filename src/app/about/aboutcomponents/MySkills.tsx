@@ -43,16 +43,19 @@ const tools: tool[] = [
 export default function MySkills() {
 
   return (
-    <div className="grid grid-rows-12 grid-cols-12 gap-6 p-6 border-amber-300 border ">
+    <div className="h-full grid grid-cols-12 gap-6 p-6 border-amber-300 border rounded-2xl">
       {/*  My Skills Title */}
-      <div className="row-start-1 row-end-2 col-start-1 col-end-3 inline-flex items-center gap-5 text-3xl">
+      <div className="col-span-12 inline-flex items-center gap-5 text-3xl">
         <CodeXml className="scale-150 text-accent-green shrink-0" />
         <h1 className="text-primary whitespace-nowrap">My Skills</h1>
       </div>
 
-      {/* Front-end Section */}
-      <h2 className="row-start-2 row-end-3 col-start-1 col-end-6 text-2xl text-accent-green ">Front-end</h2>
-      <div className="row-start-3 row-end-12 col-start-1 col-end-6  flex flex-wrap items-center gap-6 mt-3">
+      {/* Front-end title */}
+      <h2 className="col-span-6 text-2xl text-accent-green ">Front-end</h2>
+      {/* Tools title */}
+      <h2 className="col-span-6 text-2xl text-warning-orange">Tools</h2>
+       {/* Front-end skills list  */}
+      <div className="col-span-5 flex flex-wrap items-center gap-6 mt-3">
         {skills.map((skill) => (
           <div
             key={skill.name}
@@ -73,13 +76,12 @@ export default function MySkills() {
       </div>
 
       {/* Divider line */}
-      <div className=" row-start-2 row-end-12 col-start-6 col-end-6 flex justify-center mt-8">
+      <div className=" col-span-1 flex justify-center mt-8">
         <div className="w-px h-70 bg-gray-500"></div>
       </div>
 
-      {/* Tools */}
-      <h2 className="row-start-2 row-end-3 col-start-7 col-end-12 text-2xl text-warning-orange">Tools</h2>
-      <div className="row-start-3 row-end-12 col-start-8 col-end-12 flex flex-wrap items-center gap-6 mt-3 ">
+      {/* Tools list */}
+      <div className="col-span-6 flex flex-wrap items-center gap-6 mt-3 ">
         {tools.map((tool) => (
           <div key={tool.name} className="flex flex-col items-center">
             <Image
