@@ -68,7 +68,7 @@ export default function CurrentFocus() {
 
       {/* Divider */}
       <div className="col-span-1 flex justify-center">
-        <div className="w-px bg-gray-500 self-stretch" />
+        <div className="w-px  bg-gray-500 self-stretch" />
       </div>
 
       {/* Future Interests */}
@@ -77,7 +77,7 @@ export default function CurrentFocus() {
           Future Interests
         </h2>
 
-        <ul className="space-y-4">
+        <ul className="space-y-13">
           {futureInterests.map((item) => (
             <li
               key={item.name}

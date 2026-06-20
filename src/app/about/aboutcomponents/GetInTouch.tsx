@@ -42,7 +42,7 @@ const connections: connection[] = [
 ];
 export default function GetInTouch() {
   return (
-    <div className="h-full grid grid-cols-12 gap-6  border-2 border-fuchsia-500 p-6">
+    <div className="h-full grid grid-cols-12 gap-6  border-2 border-fuchsia-500 p-6 rounded-2xl">
       {/* title */}
       <div className=" col-span-4 text-3xl flex-col items-center  leading-tight mr-3 ">
         <span className=" space-y-3">

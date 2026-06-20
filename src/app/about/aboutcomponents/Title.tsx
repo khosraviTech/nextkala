@@ -3,9 +3,9 @@ import { ArrowRight, Download } from "lucide-react";
 
 export default function Title() {
   return (
-    <div className="grid grid-cols-12 gap-6 p-6 border-2 border-blue-500 rounded-2xl">
+    <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-6 p-6 border-2 border-blue-500 rounded-2xl">
       {/* Image */}
-      <div className="col-span-5 flex items-center justify-center">
+      <div className="grid-cols-1  lg:col-span-5 flex items-center justify-center">
         <div className="w-75 h-75 rounded-full overflow-hidden border-2 border-blue-950 shadow-lg">
           <Image
             src="/khosravi_cap.jpg"
@@ -18,12 +18,12 @@ export default function Title() {
       </div>
 
       {/* Content */}
-      <div className="col-span-7 flex flex-col justify-center gap-4">
+      <div className="grid-cols-1 lg:col-span-7 flex flex-col justify-center gap-4">
         <h3 className="text-xl text-accent-green">
           👋 Hi, I&apos;m
         </h3>
 
-        <h1 className="text-6xl text-primary leading-tight whitespace-nowrap">
+        <h1 className="text-6xl text-primary leading-tight xl:whitespace-nowrap">
           Amir Mohammad
         </h1>
 

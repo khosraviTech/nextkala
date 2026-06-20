@@ -51,9 +51,9 @@ export default function MySkills() {
       </div>
 
       {/* Front-end title */}
-      <h2 className="col-span-6 text-2xl text-accent-green ">Front-end</h2>
+      <h2 className="col-span-6 text-3xl text-accent-green ">Front-end</h2>
       {/* Tools title */}
-      <h2 className="col-span-6 text-2xl text-warning-orange">Tools</h2>
+      <h2 className="col-span-6 text-3xl text-warning-orange">Tools</h2>
        {/* Front-end skills list  */}
       <div className="col-span-5 flex flex-wrap items-center gap-6 mt-3">
         {skills.map((skill) => (
