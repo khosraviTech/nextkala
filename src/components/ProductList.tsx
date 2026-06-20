@@ -5,9 +5,14 @@ import { Product } from "@/types/product";
 import { useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
+import { useAppDispatch } from "@/lib/redux/hooks";
+import cartSlice from "@/lib/redux/features/cartSlice";
 const Product_Per_Page = 6;
 
 export default function ProductList({ products }: { products: Product[] }) {
+  const dispatch = useAppDispatch();
+
+  const { addToCart } = cartSlice.actions;
   //page 1 -> [0-6)
   //page 2 -> [6-12)
   //...
@@ -46,16 +51,34 @@ export default function ProductList({ products }: { products: Product[] }) {
               />
             </div>
             <h1>{product.title}</h1>
-            <h2 className="flex justify-center"><DollarSign className="size-5"/>{product.price}</h2>
+            <h2 className="flex justify-center">
+              <DollarSign className="size-5" />
+              {product.price}
+            </h2>
             <h3>⭐{product.rating}</h3>
 
-            <button className="flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100">
+            <button
+              onClick={() =>
+                dispatch(
+                  addToCart({
+                    id: product.id,
+                    title: product.title,
+                    image: product.images,
+                    price: product.price,
+                    quantity:1,
+                    totalItemPrice:product.price
+                  }),
+                )
+              }
+              className="flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100"
+            >
               <ShoppingCart size={18} />
               Add to Cart
             </button>
 
             <button className="p-2 rounded-full hover:bg-gray-100">
               <Heart className="h-5 w-5" />
+              Add to Wish list
             </button>
           </div>
         ))}

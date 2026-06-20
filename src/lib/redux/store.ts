@@ -1,23 +1,18 @@
-// lib/store/store.ts
-import { configureStore } from '@reduxjs/toolkit';
-import { apiSlice } from './apiSlice';
-// Import your slices here as you create them
-// import authReducer from './features/auth/authSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import { apiSlice } from "./apiSlice";
+import cartSlice from "./features/cartSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       [apiSlice.reducerPath]: apiSlice.reducer,
-      // Add reducers here
-      // auth: authReducer,
+      cart: cartSlice.reducer,
     },
     middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(apiSlice.middleware),
+      getDefaultMiddleware().concat(apiSlice.middleware),
   });
 };
 
-// Infer the type of the store for TypeScript
 export type AppStore = ReturnType<typeof makeStore>;
-// Infer the RootState and AppDispatch types
-export type RootState = ReturnType<AppStore['getState']>;
-export type AppDispatch = AppStore['dispatch'];
+export type RootState = ReturnType<AppStore["getState"]>;
+export type AppDispatch = AppStore["dispatch"];
