@@ -2,12 +2,14 @@
 
 import cartSlice, { DeleteFromCart } from "@/lib/redux/features/cartSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
-import { Trash2 } from "lucide-react";
-import { MoveLeft } from "lucide-react";
-import { Truck } from "lucide-react";
-import { ShieldCheck } from "lucide-react";
-import { RefreshCw } from "lucide-react";
-import { ShoppingCart } from 'lucide-react';
+import {
+  Trash2,
+  MoveLeft,
+  ShoppingCart,
+  Truck,
+  RefreshCw,
+  ShieldCheck,
+} from "lucide-react";
 
 import Image from "next/image";
 
@@ -26,8 +28,13 @@ export default function Cart() {
     <>
       <div>
         <div>
-          <h1><ShoppingCart/>Your Cart</h1>
-          <h3>{itemCounter} {itemCounter > 1 ? "items" : "item"} in your cart</h3>
+          <h1>
+            <ShoppingCart />
+            Your Cart
+          </h1>
+          <h3>
+            {itemCounter} {itemCounter > 1 ? "items" : "item"} in your cart
+          </h3>
         </div>
         {/* products */}
         <div>
@@ -102,18 +109,12 @@ export default function Cart() {
           <h3>
             Subtotal ({itemCounter} {itemCounter > 1 ? "items" : "item"})
           </h3>
-          <h3>
-            ${totalPrice}
-          </h3>
+          <h3>${totalPrice}</h3>
 
           <h3>Shipping</h3>
-          <h3>
-            $10
-          </h3>
+          <h3>$10</h3>
           <h1>Total</h1>
-          <h1>
-            ${totalPrice + 10}
-          </h1>
+          <h1>${totalPrice + 10}</h1>
 
           {/* // TODO: Enable checkout button after user authentication is implemented in userSlice. */}
           <button>Proceed to checkout</button>
