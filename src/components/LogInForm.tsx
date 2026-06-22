@@ -1,5 +1,7 @@
 "use client";
 
+import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
+
 import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -7,9 +9,9 @@ import { useState } from "react";
 
 export default function LogInForm() {
 
+  const userlist = useAppSelector((state) => state.user);
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+
   const [error, setError] = useState("");
 
   const router = useRouter();
@@ -24,21 +26,43 @@ export default function LogInForm() {
     });
   };
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
+    const formData = new FormData(e.currentTarget);
 
-    const result = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
 
-    if (result?.error) {
-      setError("Invalid email or password");
-    } else {
+    const inputUser = userlist.find(
+      (user) => user.email == email && user.password == password,
+    );
+
+    if (inputUser) {
+      alert("welcome");
       router.push("/");
       router.refresh();
+      return;
+    }
+    if(!inputUser){
+      setError('user not found')
+      return
+    } 
+    
+    //next aut part for signin with auth but it won't run becasue of we are using dummy json not a real api!
+    else {
+      const result = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        setError("Invalid email or password");
+      } else {
+        router.push("/");
+        router.refresh();
+      }
     }
   }
 
@@ -50,7 +74,7 @@ export default function LogInForm() {
        h-auto p-3"
       >
         <div className="w-full">
-          <label htmlFor="name">Email:</label>
+          <label htmlFor="email">Email:</label>
           <input
             placeholder="admin@gmail.com"
             className="border-2 rounded-3xl m-1 ml-7 p-1"
