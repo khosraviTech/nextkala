@@ -8,10 +8,11 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function LogInForm() {
-
+  const dispatch = useAppDispatch();
   const userlist = useAppSelector((state) => state.user);
 
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const router = useRouter();
@@ -37,17 +38,13 @@ export default function LogInForm() {
     const inputUser = userlist.find(
       (user) => user.email == email && user.password == password,
     );
-
+    
     if (inputUser) {
       alert("welcome");
       router.push("/");
       router.refresh();
       return;
     }
-    if(!inputUser){
-      setError('user not found')
-      return
-    } 
     
     //next aut part for signin with auth but it won't run becasue of we are using dummy json not a real api!
     else {
