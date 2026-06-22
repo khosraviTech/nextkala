@@ -10,11 +10,11 @@ export const apiSlice = createApi({
   }),
 
   endpoints: (builder) => ({
-    getProducts: builder.query({
-      query: () => "products",
+    getUsers: builder.query({
+      query: () => "users",
     }),
     
   }),
 });
 
-export const { useGetProductsQuery } = apiSlice;
+export const { useGetUsersQuery } = apiSlice;

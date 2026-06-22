@@ -1,22 +1,31 @@
-import { createSlice } from "@reduxjs/toolkit";
-interface User{
-firstName:string,
-lastName:string,
-Email:string,
-//TODO: implement the interface of user base on the project needs in design
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+
+interface User {
+    id: string,
+    firstName: string,
+    lastName: string,
+    email: string,
+    isLoggedIn: boolean,
+    password: string
+
 
 }
-const initialState:User[]=[]
-const userSlice =createSlice({
-    name:'user',
+const initialState: User[] = []
+
+
+const userSlice = createSlice({
+    name: 'user',
     initialState,
     reducers:
     {
-        addUser(state){},
-    editUser(state){},
-    deleteUser(state){},
-    getUser(state){},
-    getAllUser(state){},
+        addUser(state,action:PayloadAction<User>) {
+            
+         },
+        editUser(state) { },
+        deleteUser(state) { },
+        getUser(state) { },
+        getAllUser(state) { },
     }
 
 })

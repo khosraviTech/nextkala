@@ -8,7 +8,7 @@ export default function SignUpForm() {
     <div className="flex items-center justify-center min-h-screen">
       <div className="p-10! border-2 border-amber-600 w-96">
         <div className="flex flex-col gap-4">
-          {/* First name & Last name - side by side */}
+          {/* First name & Last name  */}
           <div className="flex gap-4">
             <div className="flex-1">
               <label htmlFor="firstName" className="block mb-1">

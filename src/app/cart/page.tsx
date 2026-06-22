@@ -27,6 +27,7 @@ export default function Cart() {
   return (
     <>
       <div>
+        {/* title of page */}
         <div>
           <h1>
             <ShoppingCart />
@@ -36,7 +37,7 @@ export default function Cart() {
             {itemCounter} {itemCounter > 1 ? "items" : "item"} in your cart
           </h3>
         </div>
-        {/* products */}
+        {/* products list */}
         <div>
           {cartItems.map((item) => (
             <div key={item.id}>
