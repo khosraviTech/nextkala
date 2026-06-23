@@ -10,8 +10,11 @@ import {
   RefreshCw,
   ShieldCheck,
 } from "lucide-react";
+import { SessionProvider, useSession } from "next-auth/react";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import ProceedToCheckout from "./cartComponents/ProceedToCheckout";
 
 export default function Cart() {
   const dispatch = useAppDispatch();
@@ -118,7 +121,9 @@ export default function Cart() {
           <h1>${totalPrice + 10}</h1>
 
           {/* // TODO: Enable checkout button after user authentication is implemented in userSlice. */}
-          <button>Proceed to checkout</button>
+          <SessionProvider>
+            <ProceedToCheckout itemCounter={itemCounter}/>
+          </SessionProvider>
         </div>
         {/* our shopping values*/}
         <div>
