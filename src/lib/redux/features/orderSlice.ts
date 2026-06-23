@@ -1,16 +1,24 @@
 import { Order } from "@/types/order";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Edit } from "lucide-react";
-import { initialize } from "next/dist/server/lib/render-server";
+
 
 const initialState: Order[] = []
 const orederSlice = createSlice({
     name: 'order',
     initialState,
     reducers: {
-        addOrder(state, action: PayloadAction) { },
-        deleteOrder(state, action: PayloadAction) { },
-        editOrder(state, action: PayloadAction) { }
+        addOrder(state, action: PayloadAction<Order>) {
+            const item = state.find((item) => item.orderId == action.payload.orderId)
+            if (!item) {
+                state.push(action.payload)
+            }
+        },
+        deleteOrder(state, action: PayloadAction<string>) {
+            //TODO
+        },
+        editOrder(state, action: PayloadAction<string>) {
+            //TODO
+        }
 
     }
 })

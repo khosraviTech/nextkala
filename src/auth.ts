@@ -40,13 +40,15 @@ export default NextAuth({
         if (!user) {
           return null;
         }
+        if (user) {
+          return {
+            id: String(user.id),
+            name: `${user.firstName} ${user.lastName}`,
+            email: user.email,
+            image: user.image,
+          };
+        }
 
-        return {
-          id: String(user.id),
-          name: `${user.firstName} ${user.lastName}`,
-          email: user.email,
-          image: user.image,
-        };
 
       },
     }),

@@ -6,7 +6,7 @@ import { cartItem } from "./cartItem";
 export interface Order {
   orderId: string;
 
-  userId: string;
+
   userName: string;
   userEmail: string;
 
@@ -14,11 +14,11 @@ export interface Order {
 
   subtotal: number;
   shipping: number;
-  tax: number;
+  tax: string;
   total: number;
 
   paymentStatus: "pending" | "paid" | "failed";
   orderStatus: "processing" | "shipped" | "delivered" | "cancelled";
 
-  createdAt: Date;
+  createdAt: string;
 }
