@@ -1,7 +1,8 @@
 "use client";
 import { useSession } from "next-auth/react";
+import router from "next/router";
 
-export default function ProceedToCheckout(props) {
+export default function ProceedToCheckout(props: { itemCounter: number; }) {
   const { data: session } = useSession();
   if (props.itemCounter == 0) {
     return (
@@ -16,12 +17,12 @@ export default function ProceedToCheckout(props) {
       </>
     );
   }
-  if (session?.user) {
+  if (session?.user && props.itemCounter > 0) {
     return (
       <>
         <button
           onClick={() => {
-            alert("go to checkout list");
+             router.push("/checkout");
           }}
         >
           Proceed to checkout
