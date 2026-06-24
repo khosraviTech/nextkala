@@ -1,4 +1,4 @@
-import LogInForm from "@/components/LogInForm";
+import LogInForm from "@/app/login/loginComponents/LogInForm";
 export default function LogIn() {
   return (
     <div className="text-center">

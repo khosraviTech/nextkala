@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function LogInForm() {
-  const dispatch = useAppDispatch();
+ 
   const userlist = useAppSelector((state) => state.user);
 
   const [email, setEmail] = useState("");

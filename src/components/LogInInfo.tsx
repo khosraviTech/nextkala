@@ -19,13 +19,13 @@ export default function LogInInfo() {
 
           <DropdownMenu.Portal>
             <DropdownMenu.Content>
-              <DropdownMenu.Item>profile</DropdownMenu.Item>
+              <DropdownMenu.Item><Link href="/profile">profile</Link></DropdownMenu.Item>
 
-              <DropdownMenu.Item>setting</DropdownMenu.Item>
+              <DropdownMenu.Item><Link href="/accountSettings">setting</Link></DropdownMenu.Item>
 
-              <DropdownMenu.Item>orders</DropdownMenu.Item>
+              <DropdownMenu.Item><Link href="/profileOrders">orders</Link></DropdownMenu.Item>
 
-              <DropdownMenu.Item>wishlist</DropdownMenu.Item>
+              <DropdownMenu.Item><Link href="/wishlist">wishlist</Link></DropdownMenu.Item>
             </DropdownMenu.Content>
           </DropdownMenu.Portal>
         </DropdownMenu.Root>
