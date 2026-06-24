@@ -26,6 +26,8 @@ export default function LogInInfo() {
               <DropdownMenu.Item><Link href="/profileOrders">orders</Link></DropdownMenu.Item>
 
               <DropdownMenu.Item><Link href="/wishlist">wishlist</Link></DropdownMenu.Item>
+
+              <DropdownMenu.Item><button onClick={()=>{signOut()}}>Log Out</button></DropdownMenu.Item>
             </DropdownMenu.Content>
           </DropdownMenu.Portal>
         </DropdownMenu.Root>
