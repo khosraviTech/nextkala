@@ -1,5 +1,9 @@
+import OrderList from "./profileOrdersComponents/OrderList";
+
 export default function page() {
   return (
-    <div>orders</div>
-  )
+    <div>
+      <OrderList />
+    </div>
+  );
 }
