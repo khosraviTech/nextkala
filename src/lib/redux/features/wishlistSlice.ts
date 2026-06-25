@@ -8,7 +8,7 @@ const initialState: cartItem[] = []
 
 
 
-const cartSlice = createSlice({
+const wishlistSlice = createSlice({
     name: 'wishlist',
     initialState,
 
@@ -46,5 +46,5 @@ const cartSlice = createSlice({
 },
 )
 
-export const { addToCart, DeleteFromCart, setQuantity } = cartSlice.actions
-export default cartSlice
+
+export default wishlistSlice

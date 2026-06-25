@@ -3,7 +3,7 @@
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import { useState } from "react";
+
 
 export default function LogInInfo() {
   const { data: session } = useSession();

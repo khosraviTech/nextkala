@@ -3,6 +3,7 @@ import { apiSlice } from "./apiSlice";
 import cartSlice from "./features/cartSlice";
 import userSlice from "./features/userSlice";
 import orederSlice from "./features/orderSlice";
+import wishlistSlice from "./features/wishlistSlice";
 
 export const makeStore = () => {
   return configureStore({
@@ -11,6 +12,8 @@ export const makeStore = () => {
       cart: cartSlice.reducer,
       user: userSlice.reducer,
       order: orederSlice.reducer,
+      wishlist:wishlistSlice.reducer
+
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(apiSlice.middleware),
