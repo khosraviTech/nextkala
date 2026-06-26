@@ -12,7 +12,7 @@ export const makeStore = () => {
       cart: cartSlice.reducer,
       user: userSlice.reducer,
       order: orederSlice.reducer,
-      wishlist:wishlistSlice.reducer
+      wishlist: wishlistSlice.reducer,
 
     },
     middleware: (getDefaultMiddleware) =>

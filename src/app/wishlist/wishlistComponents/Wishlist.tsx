@@ -1,3 +1,4 @@
+'use client'
 import wishlistSlice from "@/lib/redux/features/wishlistSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
 import { DollarSign } from "lucide-react";

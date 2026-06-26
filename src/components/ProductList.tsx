@@ -7,12 +7,14 @@ import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import { useAppDispatch } from "@/lib/redux/hooks";
 import cartSlice from "@/lib/redux/features/cartSlice";
+import wishlistSlice from "@/lib/redux/features/wishlistSlice";
 const Product_Per_Page = 6;
 
 export default function ProductList({ products }: { products: Product[] }) {
   const dispatch = useAppDispatch();
 
   const { addToCart } = cartSlice.actions;
+  const { addToWishlist } = wishlistSlice.actions;
   //page 1 -> [0-6)
   //page 2 -> [6-12)
   //...
@@ -65,8 +67,8 @@ export default function ProductList({ products }: { products: Product[] }) {
                     title: product.title,
                     image: product.images,
                     price: product.price,
-                    quantity:1,
-                    totalItemPrice:product.price
+                    quantity: 1,
+                    totalItemPrice: product.price,
                   }),
                 )
               }
@@ -76,7 +78,21 @@ export default function ProductList({ products }: { products: Product[] }) {
               Add to Cart
             </button>
 
-            <button className="p-2 rounded-full hover:bg-gray-100">
+            <button
+              onClick={() => {
+                dispatch(
+                  addToWishlist({
+                    id: product.id,
+                    title: product.title,
+                    image: product.images,
+                    price: product.price,
+                    quantity: 1,
+                    totalItemPrice: product.price,
+                  }),
+                );
+              }}
+              className="p-2 rounded-full hover:bg-gray-100"
+            >
               <Heart className="h-5 w-5" />
               Add to Wish list
             </button>
