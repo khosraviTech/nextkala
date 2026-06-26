@@ -1,3 +1,4 @@
+
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
@@ -10,6 +11,8 @@ export default NextAuth({
       credentials: {
         email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" },
+
+
       },
 
       async authorize(credentials) {
@@ -46,6 +49,31 @@ export default NextAuth({
             name: `${user.firstName} ${user.lastName}`,
             email: user.email,
             image: user.image,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            maidenName: user.maidenName,
+            age: user.age,
+            gender: user.gender,
+            phone: user.phone,
+            username: user.username,
+            password: user.password,
+            birthDate: user.birthDate,
+            bloodGroup: user.bloodGroup,
+            height: user.height,
+            weight: user.weight,
+            eyeColor: user.eyeColor,
+            hair: user.hair,
+            ip: user.ip,
+            address: user.address,
+            macAddress: user.macAddress,
+            university: user.university,
+            bank: user.bank,
+            company: user.company,
+            ein: user.ein,
+            ssn: user.ssn,
+            userAgent: user.userAgent,
+            crypto: user.crypto,
+            role: user.role,
           };
         }
 

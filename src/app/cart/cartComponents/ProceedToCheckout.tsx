@@ -1,13 +1,11 @@
 "use client";
-import cartSlice from "@/lib/redux/features/cartSlice";
-import { useAppDispatch } from "@/lib/redux/hooks";
+
 import { useSession } from "next-auth/react";
 
 import { useRouter } from "next/navigation";
 
 export default function ProceedToCheckout(props: { itemCounter: number }) {
-  const { cleanCart } = cartSlice.actions;
-  const dispatch = useAppDispatch();
+
   const router = useRouter();
   const { data: session } = useSession();
   if (props.itemCounter == 0) {
