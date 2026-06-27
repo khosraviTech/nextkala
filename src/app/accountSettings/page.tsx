@@ -1,6 +1,13 @@
+'use client'
+import { SessionProvider } from "next-auth/react";
+import Settings from "./settingsComponents/Settings";
 
 export default function page() {
   return (
-    <div>settings</div>
+    <div>
+      <SessionProvider>
+      <Settings/>
+      </SessionProvider >
+      </div>
   )
 }

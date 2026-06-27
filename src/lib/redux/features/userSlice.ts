@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { User } from "@/types/user";
-import { log } from "console";
+
+
 
 
 
@@ -29,7 +30,7 @@ const userSlice = createSlice({
                 console.log('user exist')
             }
         },
-        editUser(state, action: PayloadAction<User>) {
+        editUser(state, action:PayloadAction<{id:number, firstName: string,lastName:string , email: string}>) {
             const index = state.findIndex(
                 (user) => user.id === action.payload.id
             );
@@ -40,6 +41,7 @@ const userSlice = createSlice({
                     ...action.payload,
                 };
             }
+            
         },
         deleteUser(state, action: PayloadAction<number>) {
             return state.filter(
