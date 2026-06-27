@@ -1,46 +1,54 @@
 "use client";
-
+import { fetchUsers } from "@/lib/redux/features/userSlice";
 import userSlice from "@/lib/redux/features/userSlice";
-import { useAppDispatch } from "@/lib/redux/hooks";
+import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 
 export default function Settings() {
-  const { data: session } = useSession();
-  const dispatch = useAppDispatch();
+  const { data: session, status } = useSession();
+   const dispatch = useAppDispatch();
+//dispatch(fetchUsers());
+  //const users = useAppSelector((state) => state.user);
+  //const user = users.find((item) => item.id === Number(session?.user.id));
+ 
+  
   const { editUser } = userSlice.actions;
-  const user = session?.user;
-const [firstName, setFirstName] = useState("");
-const [lastName, setLastName] = useState("");
-const [email, setEmail] = useState("");
-useEffect(() => {
-  console.log(session?.user);
-}, [session]);
-useEffect(() => {
-  if (session?.user) {
-    setFirstName(session.user.firstName);
-    setLastName(session.user.lastName);
-    setEmail(session.user.email!);
-  }
-}, [session]);
-// console.log(session);
-// console.log(session?.user);
-// console.log('firstName is: '+firstName)
-// console.log('lastName is: '+lastName)
-// console.log('email is: '+email)
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
 
+  //   useEffect(() => {
+  //    console.log("status:", status);
+  // console.log("session:", session);
+  // console.log("session.user:", session?.user);
+  // console.log("users:", users);
+  // console.log("found user:", user);
+  //   }, []);
+
+useEffect(() => {
+  if (!session?.user) return;
+
+  setFirstName(session?.user.firstName);
+  setLastName(session?.user.lastName);
+  setEmail(session?.user.email ?? "");
+}, [session]);
 
   function saveHandler() {
     dispatch(
       editUser({
-        id: Number(user?.id),
+        id: Number(session?.user?.id),
         firstName: firstName,
         lastName: lastName,
         email: email,
       }),
     );
+    console.log("lastname changed to :  " + session?.user?.lastName );
+    alert("This App has not backend yet it's just front-end and the data fetches from dummyjson.com and it's imutable")
   }
-
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       {/* Profile Information */}
@@ -92,7 +100,15 @@ useEffect(() => {
         <input type="text" name="newPassword" />
         <label htmlFor="confirmPassword">confirm new password</label>
         <input type="text" name="confirmPassword" />
-        <button onClick={()=>alert('This App has not backend yet it\'s just front-end, so the passowrd is imutable')}>Update password</button>
+        <button
+          onClick={() =>
+            alert(
+              "This App has not backend yet it's just front-end, so the passowrd is imutable",
+            )
+          }
+        >
+          Update password
+        </button>
       </div>
     </>
   );

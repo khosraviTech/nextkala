@@ -42,6 +42,7 @@ const userSlice = createSlice({
                 };
             }
             
+            
         },
         deleteUser(state, action: PayloadAction<number>) {
             return state.filter(
@@ -68,3 +69,4 @@ const userSlice = createSlice({
 
 })
 export default userSlice
+ 
