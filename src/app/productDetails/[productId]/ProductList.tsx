@@ -45,7 +45,7 @@ export default function ProductList({ products }: { products: Product[] }) {
           <div
             key={product.id}
             className="text-amber-50 text-center  bg-blue-950 p-5 outline-0 border-2 border-blue-950 rounded-3xl shadow-2xl  "
-          ><Link href={`/products/${product.id}`}>
+          ><Link href={`/productDetails/${product.id}`}>
             <div>
               <Image
                 src={product.images[0]}
