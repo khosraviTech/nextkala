@@ -8,6 +8,8 @@ import Image from "next/image";
 import { useAppDispatch } from "@/lib/redux/hooks";
 import cartSlice from "@/lib/redux/features/cartSlice";
 import wishlistSlice from "@/lib/redux/features/wishlistSlice";
+import Link from "next/link";
+
 const Product_Per_Page = 6;
 
 export default function ProductList({ products }: { products: Product[] }) {
@@ -43,7 +45,7 @@ export default function ProductList({ products }: { products: Product[] }) {
           <div
             key={product.id}
             className="text-amber-50 text-center  bg-blue-950 p-5 outline-0 border-2 border-blue-950 rounded-3xl shadow-2xl  "
-          >
+          ><Link href={`/products/${product.id}`}>
             <div>
               <Image
                 src={product.images[0]}
@@ -52,6 +54,7 @@ export default function ProductList({ products }: { products: Product[] }) {
                 height={300}
               />
             </div>
+            </Link>
             <h1>{product.title}</h1>
             <h2 className="flex justify-center">
               <DollarSign className="size-5" />

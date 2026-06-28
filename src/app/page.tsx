@@ -1,4 +1,4 @@
-import ProductList from "@/components/ProductList";
+import ProductList from "@/app/products/[productId]/ProductList";
 
 export default async function Home() {
   
@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <main >
       <h1 className="text-center">All Products:</h1>
-      <ProductList products={productsData.products}
+      <ProductList products={productsData.products} 
         />
     </main>
   );

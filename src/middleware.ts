@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
 
-export async function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {//NOTE: work with requenst and get logic to it
   const token = await getToken({
     req: request,
     secret: process.env.AUTH_SECRET,
@@ -23,10 +23,10 @@ export async function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-export const config = {
+export const config = {//NOTE: when should middleware run? wihout it the middleware runs for every pages on app. that's not good! so we should have config
   matcher: [
     "/profile/:path*",
-    "/orders/:path*",
+    "/profileOrders/:path*",
     "/accountSettings/:path*",
   ],
 };
