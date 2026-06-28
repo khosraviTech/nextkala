@@ -3,6 +3,7 @@
 import { useMemo } from 'react';
 import { Provider } from 'react-redux';
 import { makeStore } from '@/lib/redux/store';
+import { SessionProvider } from 'next-auth/react';
 
 export default function StoreProvider({
   children,
@@ -11,5 +12,5 @@ export default function StoreProvider({
 }) {
   const store = useMemo(() => makeStore(), []);
 
-  return <Provider store={store}>{children}</Provider>;
+  return  <SessionProvider><Provider store={store}>{children}</Provider></SessionProvider>;
 }

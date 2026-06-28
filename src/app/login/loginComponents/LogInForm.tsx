@@ -57,8 +57,9 @@ export default function LogInForm() {
       if (result?.error) {
         setError("Invalid email or password");
       } else {
-        router.push("/");
         router.refresh();
+        router.push("/");
+        
       }
     }
   }

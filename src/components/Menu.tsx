@@ -15,9 +15,9 @@ export default function Menu() {
       <Link href="/">Home</Link>
 
       <Link href="/about">About</Link>
-      <SessionProvider>
+      
         <LogInInfo />
-      </SessionProvider>
+     
 
       {/* Search bar */}
       
