@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import LogInInfo from "./LogInInfo";
-import { ShoppingCart } from "lucide-react";
+import { Heart, ShoppingCart } from "lucide-react";
 
 import { SessionProvider } from "next-auth/react";
 
@@ -20,10 +20,16 @@ export default function Menu() {
       </SessionProvider>
 
       {/* Search bar */}
+      
+      {/* Cart Icon */}
       <Link href="/cart">
         <ShoppingCart />
       </Link>
-      {/* Cart Icon */}
+
+      {/* Wishlist Icon */}
+      <Link href="/wishlist">
+        <Heart />
+      </Link>
     </div>
   );
 }
