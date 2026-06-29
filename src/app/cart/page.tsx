@@ -9,6 +9,8 @@ import {
   Truck,
   RefreshCw,
   ShieldCheck,
+  CreditCard,
+
 } from "lucide-react";
 import { SessionProvider } from "next-auth/react";
 
@@ -29,7 +31,7 @@ export default function Cart() {
 
   return (
     <>
-      <div className="grid grid-cols-12 gap-6 border-2 border-blue-500">
+      <div className="grid grid-cols-12 gap-6 border-2 border-blue-500 ">
         {/* title of page */}
         <div className="ml-3 space-y-2  col-span-12">
           <h1 className="inline-flex items-center gap-2">
@@ -42,7 +44,7 @@ export default function Cart() {
         </div>
 
         {/* products list */}
-        <div className="grid gird-cols-12 col-span-8 border-2 border-red-500">
+        <div className="grid gird-cols-12 col-span-8 border-2 border-red-500 p-6">
           {/* product list col names */}
           <div className="col-span-12 grid grid-cols-12 p-6 ">
             <h1 className="col-span-8">Product</h1>
@@ -113,7 +115,7 @@ export default function Cart() {
           ))}
 
           {/* footer of product list */}
-          <div className="flex justify-between">
+          <div className="col-span-12 flex justify-between ">
             <button className="inline-flex items-center gap-2">
               <MoveLeft />
               continue shopping
@@ -126,23 +128,29 @@ export default function Cart() {
         </div>
 
         {/* order summery & Proceed to checkout */}
-        <div className="col-span-4 border-2 border-green-500">
-          <h1>Order Summery</h1>
-
-          <h3>
-            Subtotal ({itemCounter} {itemCounter > 1 ? "items" : "item"})
-          </h3>
-          <h3>${totalPrice}</h3>
-
-          <h3>Shipping</h3>
-          <h3>$10</h3>
-          <h1>Total</h1>
-          <h1>${totalPrice + 10}</h1>
-
+        <div className="grid grid-cols-12 col-span-4 border-2 border-green-500 p-6 ">
+          <h1 className="col-span-12">Order Summery</h1>
+          <div className="col-span-12 flex justify-between">
+            <h3>
+              Subtotal ({itemCounter} {itemCounter > 1 ? "items" : "item"})
+            </h3>
+            <h3>${totalPrice}</h3>
+          </div>
+          <div className="col-span-12 flex justify-between">
+            <h3>Shipping</h3>
+            <h3>$10</h3>
+          </div>
+          <div className="col-span-12 flex justify-between">
+            <h1>Total</h1>
+            <h1>${totalPrice + 10}</h1>
+          </div>
+          {/* checkout button */}
+          <div className="col-span-12 border-2 border-red-500  text-center p-2" >
           {/* // TODO: Enable checkout button after user authentication is implemented in userSlice. */}
           <SessionProvider>
             <ProceedToCheckout itemCounter={itemCounter} />
           </SessionProvider>
+        </div>
         </div>
 
         {/* our shopping values*/}
