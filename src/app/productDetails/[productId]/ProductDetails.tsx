@@ -68,7 +68,7 @@ export default function ProductDetails(props: { product: any }) {
             }),
           );
         }}
-        className="p-2 rounded-full hover:bg-gray-100"
+        className="p-2 rounded-full hover:bg-gray-100 flex items-center gap-2"
       >
         <Heart className="h-5 w-5" />
         Add to Wish list

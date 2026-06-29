@@ -29,10 +29,10 @@ export default function Cart() {
 
   return (
     <>
-      <div>
+      <div className="grid grid-cols-12 gap-6 border-2 border-blue-500">
         {/* title of page */}
-        <div>
-          <h1>
+        <div className="ml-3 space-y-2  col-span-12">
+          <h1 className="inline-flex items-center gap-2">
             <ShoppingCart />
             Your Cart
           </h1>
@@ -40,10 +40,11 @@ export default function Cart() {
             {itemCounter} {itemCounter > 1 ? "items" : "item"} in your cart
           </h3>
         </div>
+
         {/* products list */}
-        <div>
+        <div className="col-span-8 border-2 border-red-500">
           {cartItems.map((item) => (
-            <div key={item.id}>
+            <div key={item.id} className="flex justify-between gap-6">
               {/* item image part */}
               <Image
                 src={item.image[0]}
@@ -94,20 +95,22 @@ export default function Cart() {
               </button>
             </div>
           ))}
+
+          {/* footer of product list */}
+          <div className="flex justify-between">
+            <button className="inline-flex items-center gap-2">
+              <MoveLeft />
+              continue shopping
+            </button>
+            <button className="inline-flex items-center gap-2">
+              clear Cart
+              <Trash2 />
+            </button>
+          </div>
         </div>
-        {/* footer of product list */}
-        <div>
-          <button>
-            <MoveLeft />
-            continue shopping
-          </button>
-          <button>
-            clear Cart
-            <Trash2 />
-          </button>
-        </div>
+
         {/* order summery & Proceed to checkout */}
-        <div>
+        <div className="col-span-4 border-2 border-green-500">
           <h1>Order Summery</h1>
 
           <h3>
@@ -125,24 +128,32 @@ export default function Cart() {
             <ProceedToCheckout itemCounter={itemCounter} />
           </SessionProvider>
         </div>
+
         {/* our shopping values*/}
-        <div>
-          <div>
-            <Truck />
-            <h2>Free Shipping</h2>
-            <h3>on orders over $50</h3>
-          </div>
-          <div>
-            <ShieldCheck />
-
-            <h2>Secure Payment</h2>
-            <h3>100% secure payment</h3>
+        <div className="p-6 col-span-12 flex justify-between border-2 border-purple-500 ">
+          
+          <div className="inline-flex items-center gap-3">
+            <Truck className="scale-150" />
+            <div className="flex-col items-center">
+              <h2>Free Shipping</h2>
+              <h3>on orders over $50</h3>
+            </div>
           </div>
 
-          <div>
-            <RefreshCw />
-            <h2>Easy Return</h2>
-            <h3>30-day return policy</h3>
+          <div className="inline-flex items-center gap-3 ">
+            <ShieldCheck className="scale-140" />
+            <div className="flex-col items-center">
+              <h2>Secure Payment</h2>
+              <h3>100% secure payment</h3>
+            </div>
+          </div>
+
+          <div className="inline-flex items-center gap-3 ">
+            <RefreshCw className="scale-120" />
+            <div className="flex-col items-center">
+              <h2>Easy Return</h2>
+              <h3>30-day return policy</h3>
+            </div>
           </div>
         </div>
       </div>
