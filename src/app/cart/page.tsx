@@ -30,7 +30,7 @@ export default function Cart() {
 
   return (
     <>
-      <div className="grid grid-cols-12 gap-3  bg-bg-dark p-6 h-full ">
+      <div className="grid grid-cols-12 gap-6 p-6 h-full ">
         {/* title of page */}
         <div className="ml-3 col-span-12 ">
           <h1 className="inline-flex items-center gap-2 text-primary text-4xl mb-3">
@@ -51,9 +51,9 @@ export default function Cart() {
             </h1>
           ) : (
             <div className="col-span-12 grid grid-cols-12 p-6  text-primary">
-              <h1 className="col-span-8">Product</h1>
+              <h1 className="col-span-6">Product</h1>
               <h1 className="col-span-1">Price</h1>
-              <h1 className="col-span-1">Quantity</h1>
+              <h1 className="col-span-3 pl-6">Quantity</h1>
               <h1 className="col-span-1 pl-6">Total</h1>
             </div>
           )}
@@ -64,7 +64,7 @@ export default function Cart() {
               className="col-span-12 grid grid-cols-12 p-6 gap-6  items-center"
             >
               {/* item image part */}
-              <div className="col-span-8 inline-flex items-center text-primary gap-6">
+              <div className="col-span-6 inline-flex items-center text-primary gap-6">
                 <Image
                   src={item.image[0]}
                   width={100}
@@ -78,9 +78,9 @@ export default function Cart() {
               {/* item price part */}
               <h1 className="col-span-1 text-primary">{item.price}</h1>
 
-              {/* quantity part */}
-              <div className="col-span-1 inline-flex items-center  text-primary">
-                <button
+              {/* quantity part & buttons */}
+              <div className="col-span-3 inline-flex items-center  text-primary">
+                <button className="border-2 border-border rounded-l-xl text-secondary text-xl p-2"
                   onClick={() =>
                     dispatch(
                       setQuantity({
@@ -92,8 +92,8 @@ export default function Cart() {
                 >
                   -
                 </button>
-                <h2>{item.quantity}</h2>
-                <button
+                <h2 className="border-2 border-border text-secondary text-xl p-2 ">{item.quantity}</h2>
+                <button className="border-2 border-border rounded-r-xl text-secondary text-xl p-2"
                   onClick={() =>
                     dispatch(
                       setQuantity({
@@ -117,7 +117,7 @@ export default function Cart() {
                 className="col-span-1 flex  items-center  text-secondary pl-3"
                 onClick={() => dispatch(DeleteFromCart(item.id))}
               >
-                <Trash2 className="scale-100 " />
+                <Trash2 className="scale-100 shrink-0 " />
               </button>
             </div>
           ))}
@@ -142,18 +142,18 @@ export default function Cart() {
 
         {/* order summery & Proceed to checkout */}
         <div className="grid grid-cols-12 col-span-4 border-2 rounded-3xl bg-bg-card border-border p-6 ">
-          <h1 className="col-span-12 text-primary text-xl">Order Summery</h1>
-          <div className="col-span-12 flex justify-between text-secondary text-sm">
+          <h1 className="col-span-12 text-primary text-3xl">Order Summery</h1>
+          <div className="col-span-12 flex justify-between text-secondary text-xl">
             <h3>
               Subtotal ({itemCounter} {itemCounter > 1 ? "items" : "item"})
             </h3>
             <h3>${totalPrice}</h3>
           </div>
-          <div className="col-span-12 flex justify-between  text-secondary text-sm">
+          <div className="col-span-12 flex justify-between  text-secondary text-xl">
             <h3>Shipping</h3>
             <h3>$10</h3>
           </div>
-          <div className="col-span-12 flex justify-between  text-primary text-xl">
+          <div className="col-span-12 flex justify-between  text-primary text-2xl">
             <h1>Total</h1>
             <h1>${totalPrice + 10}</h1>
           </div>
@@ -168,8 +168,8 @@ export default function Cart() {
         </div>
 
         {/* our shopping values*/}
-        <div className="p-6 col-span-12 flex justify-between border-2 border-border   bg-bg-card rounded-3xl ">
-          <div className="inline-flex items-center gap-3">
+        <div className="p-6 pl-12 pr-12 col-span-12 flex justify-between border-2 border-border   bg-bg-card rounded-3xl ">
+          <div className="inline-flex items-center gap-3 ">
             <Truck className="scale-150 text-accent-green" />
             <div className="flex-col items-center">
               <h2 className="text-primary">Free Shipping</h2>
