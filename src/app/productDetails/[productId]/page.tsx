@@ -1,3 +1,12 @@
+
+import ProductDetails from "./ProductDetails";
+
+type Props = {
+  params: {
+    productId: number;
+  };
+};
+
 async function getProduct(id: number) {
   const res = await fetch(`https://dummyjson.com/products/${id}`, {
     cache: "no-store",
@@ -6,13 +15,16 @@ async function getProduct(id: number) {
   return res.json();
 }
 
-export default async function page(params: { productId: number }) {
+export default async function page({ params }: Props) {
+  
   const { productId } = await params;
-  const product = getProduct(productId);
+  console.log("productID is : " + productId);
+  const product = await getProduct(productId);
+  console.log("product is : " + product);
 
   return (
     <>
-      <div>hello product ID</div>
+     <ProductDetails  product={product} />
     </>
   );
 }
