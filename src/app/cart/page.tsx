@@ -42,23 +42,36 @@ export default function Cart() {
         </div>
 
         {/* products list */}
-        <div className="col-span-8 border-2 border-red-500">
+        <div className="grid gird-cols-12 col-span-8 border-2 border-red-500">
+          {/* product list col names */}
+          <div className="col-span-12 grid grid-cols-12 p-6 ">
+            <h1 className="col-span-8">Product</h1>
+            <h1 className="col-span-1">Price</h1>
+            <h1 className="col-span-1">Quantity</h1>
+            <h1 className="col-span-1 pl-6">Total</h1>
+          </div>
           {cartItems.map((item) => (
-            <div key={item.id} className="flex justify-between gap-6">
+            <div
+              key={item.id}
+              className="col-span-12 grid grid-cols-12 p-6 gap-6  items-center"
+            >
               {/* item image part */}
-              <Image
-                src={item.image[0]}
-                width={100}
-                height={100}
-                alt="Picture of product"
-                className=""
-              />
-              {/* item title part */}
-              <h1>{item.title}</h1>
+              <div className="col-span-8 inline-flex items-center">
+                <Image
+                  src={item.image[0]}
+                  width={100}
+                  height={100}
+                  alt="Picture of product"
+                  className=""
+                />
+                {/* item title part */}
+                <h1>{item.title}</h1>
+              </div>
               {/* item price part */}
-              <h1>{item.price}</h1>
+              <h1 className="col-span-1">{item.price}</h1>
+
               {/* quantity part */}
-              <div>
+              <div className="col-span-1 inline-flex items-center">
                 <button
                   onClick={() =>
                     dispatch(
@@ -87,10 +100,13 @@ export default function Cart() {
               </div>
 
               {/* total item price part */}
+              <div className="col-span-1">{item.totalItemPrice}</div>
 
-              {item.totalItemPrice}
               {/* delet item part- trash icon */}
-              <button onClick={() => dispatch(DeleteFromCart(item.id))}>
+              <button
+                className="col-span-1 flex  items-center "
+                onClick={() => dispatch(DeleteFromCart(item.id))}
+              >
                 <Trash2 />
               </button>
             </div>
@@ -131,7 +147,6 @@ export default function Cart() {
 
         {/* our shopping values*/}
         <div className="p-6 col-span-12 flex justify-between border-2 border-purple-500 ">
-          
           <div className="inline-flex items-center gap-3">
             <Truck className="scale-150" />
             <div className="flex-col items-center">
