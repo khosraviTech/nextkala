@@ -30,7 +30,7 @@ export default function Cart() {
 
   return (
     <>
-      <div className="grid grid-cols-12 gap-6 p-6 h-full ">
+      <div className="grid grid-cols-12 gap-6 p-12 h-full ">
         {/* title of page */}
         <div className="ml-3 col-span-12 ">
           <h1 className="inline-flex items-center gap-2 text-primary text-4xl mb-3">

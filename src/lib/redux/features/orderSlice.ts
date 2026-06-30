@@ -1,8 +1,12 @@
 import { Order } from "@/types/order";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+const initialState: Order[] =
+    typeof window !== "undefined"
+        ? JSON.parse(localStorage.getItem("Orders") || "[]")
+        : [];
 
-const initialState: Order[] = []
+
 const orederSlice = createSlice({
     name: 'order',
     initialState,
@@ -12,12 +16,27 @@ const orederSlice = createSlice({
             if (!item) {
                 state.push(action.payload)
             }
+            localStorage.setItem('Orders', JSON.stringify(state))
         },
         deleteOrder(state, action: PayloadAction<string>) {
-            //TODO
+            const newState=state.filter(item => item.orderId !== action.payload);
+             localStorage.setItem('Orders',JSON.stringify(newState))
+             return newState
         },
         editOrder(state, action: PayloadAction<string>) {
-            //TODO
+            const index = state.findIndex(
+                (item) => item.orderId === action.payload
+            );
+
+            if (index !== -1) {
+                state[index] = {
+                    ...state[index],
+                    ...action.payload,
+                };
+            }
+            localStorage.setItem('Orders',JSON.stringify(state))
+
+
         }
 
     }

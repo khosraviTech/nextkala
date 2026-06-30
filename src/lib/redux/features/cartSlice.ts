@@ -1,11 +1,14 @@
 import { cartItem } from '@/types/cartItem'
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
+import { json } from 'stream/consumers'
 
 
 
-const initialState: cartItem[] = []
-
+const initialState: cartItem[] =
+  typeof window !== "undefined"
+    ? JSON.parse(localStorage.getItem("cartItems") || "[]")
+    : [];
 
 
 const cartSlice = createSlice({
@@ -24,12 +27,15 @@ const cartSlice = createSlice({
             else {
                 state.push(action.payload)
             }
+            localStorage.setItem('cartItems',JSON.stringify(state))
 
         },
 
 
         DeleteFromCart(state, action: PayloadAction<number>) {
-            return state.filter(item => item.id !== action.payload);
+             const newState=state.filter(item => item.id !== action.payload);
+             localStorage.setItem('cartItems',JSON.stringify(newState))
+             return newState
         },
 
         setQuantity(state, action: PayloadAction<{ id: number, quantity: number }>) {
@@ -38,9 +44,11 @@ const cartSlice = createSlice({
                 item.quantity = action.payload.quantity
                 item.totalItemPrice = item.price * item.quantity
             }
+            localStorage.setItem('cartItems',JSON.stringify(state))
 
         },
         cleanCart() {
+            localStorage.setItem('cartItems',JSON.stringify([]))
             return []
         },
 
