@@ -1,61 +1,13 @@
 "use client";
-import { v4 as uuidv4 } from "uuid";
-import { useAppDispatch, useAppSelector } from "@/lib/redux/hooks";
-import { Order } from "@/types/order";
-import { useSession } from "next-auth/react";
-import orederSlice from "@/lib/redux/features/orderSlice";
-import cartSlice from "@/lib/redux/features/cartSlice";
-import { useEffect, useMemo, useState } from "react";
+
+import { useAppSelector } from "@/lib/redux/hooks";
 import { ClipboardCheck } from "lucide-react";
 
-export default function CreateOrder() {
-  const dispatch = useAppDispatch();
+export default function OrderPage(props: { orderId: any }) {
+  const orders = useAppSelector((state) => state.order);
 
-  const cartItems = useAppSelector((state) => state.cart);
-  const { cleanCart } = cartSlice.actions;
-  const { addOrder } = orederSlice.actions;
-
-  const totalPrice = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0,
-  );
-
-  const { data: session } = useSession();
-  const user = session?.user;
-  // const newOrder = useMemo<Order>(
-  //   () => ({
-  //     orderId: uuidv4(),
-  //     userName: user?.name ?? "",
-  //     userEmail: user?.email ?? "",
-  //     items: cartItems,
-  //     subtotal: totalPrice,
-  //     shipping: 10,
-  //     tax: "10%",
-  //     total: totalPrice * 1.1 + 10,
-  //     paymentStatus: "pending",
-  //     orderStatus: "processing",
-  //     createdAt: new Date().toISOString(),
-  //   }),
-  //   [],
-  // );
-const [newOrder, setNewOrder] = useState<Order>();
-  useEffect(() => {
-     const newOrder:Order={  orderId: uuidv4(),
-      userName: user?.name ?? "",
-      userEmail: user?.email ?? "",
-      items: cartItems,
-      subtotal: totalPrice,
-      shipping: 10,
-      tax: "10%",
-      total: totalPrice * 1.1 + 10,
-      paymentStatus: "pending",
-      orderStatus: "processing",
-      createdAt: new Date().toISOString(),}
-      setNewOrder(newOrder)
-    dispatch(addOrder(newOrder));
-    dispatch(cleanCart());
-  }, []);
-
+  const { orderId } = props;
+const newOrder = orders.find((item)=>item.orderId==orderId)
   return (
     <>
       <div className="grid grid-cols-12 gap-6 p-6">
@@ -80,7 +32,9 @@ const [newOrder, setNewOrder] = useState<Order>();
 
           <div className="col-span-12 flex justify-between text-2xl">
             <h4 className="text-primary">Date</h4>
-            <h4 className="text-accent-green ">{newOrder?.createdAt.split("T")[0]}</h4>
+            <h4 className="text-accent-green ">
+              {newOrder?.createdAt.split("T")[0]}
+            </h4>
           </div>
 
           <div className="col-span-12 flex justify-between text-2xl">
@@ -94,24 +48,20 @@ const [newOrder, setNewOrder] = useState<Order>();
             ))}
           </div>
 
-
           <div className="col-span-12 flex justify-between text-2xl">
             <h4 className="text-primary">subtotal</h4>
-            <h4 className="text-accent-green ">${totalPrice}</h4>
+            <h4 className="text-accent-green ">${newOrder?.subtotal}</h4>
           </div>
-
 
           <div className="col-span-12 flex justify-between text-2xl">
             <h4 className="text-primary">shipping</h4>
             <h4 className="text-accent-green ">$10</h4>
           </div>
 
-
           <div className="col-span-12 flex justify-between text-2xl">
             <h4 className="text-primary">Tax</h4>
             <h4 className="text-accent-green ">{newOrder?.tax}</h4>
           </div>
-
 
           <div className="col-span-12 flex justify-between text-2xl">
             <h4 className="text-primary">Total</h4>
