@@ -1,6 +1,4 @@
-
 import OrderPage from "./OrderPage";
-
 
 type Props = {
   params: {
@@ -8,16 +6,12 @@ type Props = {
   };
 };
 
-
-
 export default async function page({ params }: Props) {
-  
   const { orderId } = await params;
-  
 
   return (
     <>
-     <OrderPage  orderId={orderId} />
+      <OrderPage orderId={orderId} />
     </>
   );
 }

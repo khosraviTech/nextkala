@@ -1,6 +1,6 @@
 import { Order } from "@/types/order";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../store";
+
 
 
 
@@ -20,10 +20,10 @@ const orederSlice = createSlice({
             
             if (!item) {
                 state.push(action.payload)
-                
+                localStorage.setItem('Orders', JSON.stringify(state))
                 
             }
-            localStorage.setItem('Orders', JSON.stringify(state))
+            
             
         },
         deleteOrder(state, action: PayloadAction<string>) {

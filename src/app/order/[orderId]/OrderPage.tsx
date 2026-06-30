@@ -3,11 +3,11 @@
 import { useAppSelector } from "@/lib/redux/hooks";
 import { ClipboardCheck } from "lucide-react";
 
-export default function OrderPage(props: { orderId: any }) {
+export default function OrderPage(props: { orderId: string }) {
   const orders = useAppSelector((state) => state.order);
 
   const { orderId } = props;
-const newOrder = orders.find((item)=>item.orderId==orderId)
+  const newOrder = orders.find((item) => item.orderId == orderId);
   return (
     <>
       <div className="grid grid-cols-12 gap-6 p-6">
@@ -37,13 +37,13 @@ const newOrder = orders.find((item)=>item.orderId==orderId)
             </h4>
           </div>
 
-          <div className="col-span-12 flex justify-between text-2xl">
+          <div className="col-span-12   text-2xl ">
             {newOrder?.items.map((item) => (
-              <div key={item.title}>
-                <h4 className="text-primary">
+              <div key={item.title} className="flex justify-between ">
+                <h4 className="text-primary  pt-4">
                   {item.title} x{item.quantity}
                 </h4>
-                <h4 className="text-accent-green ">${item.totalItemPrice}</h4>
+                <h4 className="text-accent-green">${item.totalItemPrice}</h4>
               </div>
             ))}
           </div>
