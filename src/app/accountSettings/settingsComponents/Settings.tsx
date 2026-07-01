@@ -52,11 +52,14 @@ useEffect(() => {
   return (
     <>
       {/* Profile Information */}
-      <div>
-        <h1>Profile Information</h1>
-        <label htmlFor="firstName">firstName</label>
-        <label htmlFor="lastName">lastName</label>
-        <input
+      <div className="grid grid-cols-12 m-12 gap-6 border-2 border-border rounded-3xl p-6 bg-bg-card">
+        <h1 className="col-span-12 text-3xl text-accent-green">Profile Information</h1>
+        
+        
+        <label className="col-span-6  text-primary" htmlFor="firstName">firstName</label>
+        <label className="col-span-6  text-primary" htmlFor="lastName">lastName</label>
+        
+        <input className="col-span-6  text-secondary border-2  rounded-2xl p-2"
           type="text"
           name="firstName"
           value={firstName}
@@ -65,6 +68,7 @@ useEffect(() => {
           }}
         />
         <input
+        className="col-span-6  text-secondary border-2  rounded-2xl p-2"
           type="text"
           name="laststName"
           value={lastName}
@@ -73,8 +77,9 @@ useEffect(() => {
           }}
         />
 
-        <label htmlFor="email">Email</label>
+        <label className="col-span-12  text-primary" htmlFor="email">Email</label>
         <input
+        className="col-span-12  text-secondary border-2  rounded-2xl p-2"
           type="email"
           name="email"
           value={email?.toString()}
@@ -83,6 +88,7 @@ useEffect(() => {
           }}
         />
         <button
+        className="col-start-10 col-span-3 border-2 rounded-2xl text-primary border-amber-50 p-2 "
           onClick={() => {
             saveHandler();
           }}
@@ -92,15 +98,21 @@ useEffect(() => {
       </div>
 
       {/* Change Password */}
-      <div>
-        <h1> Change Password </h1>
-        <label htmlFor="currentPassword">current password</label>
-        <input type="text" name="currentPassword" />
-        <label htmlFor="newPassword">new password</label>
-        <input type="text" name="newPassword" />
-        <label htmlFor="confirmPassword">confirm new password</label>
-        <input type="text" name="confirmPassword" />
+      <div className="grid grid-cols-12 m-12 gap-6 border-2 border-border rounded-3xl p-6 bg-bg-card">
+        <h1 className="col-span-12 text-3xl text-accent-green"> Change Password </h1>
+        
+        
+        <label className="col-span-12  text-primary" htmlFor="currentPassword">current password</label>
+        <input className="col-span-12  text-secondary border-2  rounded-2xl p-2"  type="text" name="currentPassword" />
+        
+        <label className="col-span-12  text-primary"  htmlFor="newPassword">new password</label>
+        <input className="col-span-12  text-secondary border-2  rounded-2xl p-2" type="text" name="newPassword" />
+        
+        <label className="col-span-12  text-primary"  htmlFor="confirmPassword">confirm new password</label>
+        <input className="col-span-12  text-secondary border-2  rounded-2xl p-2" type="text" name="confirmPassword" />
+        
         <button
+        className="col-start-9 col-span-4 border-2 rounded-2xl text-primary border-amber-50 p-2 "
           onClick={() =>
             alert(
               "This App has not backend yet it's just front-end, so the passowrd is imutable",
