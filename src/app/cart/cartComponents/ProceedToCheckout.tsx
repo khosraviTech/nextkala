@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useRouter } from "next/navigation";
 
 export default function ProceedToCheckout(props: { itemCounter: number }) {
+  
   const dispatch = useAppDispatch();
 
   const router = useRouter();
@@ -15,11 +16,14 @@ export default function ProceedToCheckout(props: { itemCounter: number }) {
   const cartItems = useAppSelector((state) => state.cart);
   const { cleanCart } = cartSlice.actions;
   const { addOrder } = orederSlice.actions;
+ 
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0,
   );
+ 
   if (props.itemCounter == 0) {
+ 
     return (
       <>
         <button
