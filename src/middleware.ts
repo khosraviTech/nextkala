@@ -13,7 +13,8 @@ export async function middleware(request: NextRequest) {//NOTE: work with requen
   if (
     pathname.startsWith("/profile") ||
     pathname.startsWith("/profileOrders") ||
-    pathname.startsWith("/accountSettings")
+    pathname.startsWith("/accountSettings") ||
+     pathname.startsWith("/order") 
   ) {
     if (!token) {
       return NextResponse.redirect(new URL("/login", request.url));
@@ -25,6 +26,7 @@ export async function middleware(request: NextRequest) {//NOTE: work with requen
 
 export const config = {//NOTE: when should middleware run? wihout it the middleware runs for every pages on app. that's not good! so we should have config
   matcher: [
+    "/order/:path*",
     "/profile/:path*",
     "/profileOrders/:path*",
     "/accountSettings/:path*",

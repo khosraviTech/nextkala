@@ -24,7 +24,7 @@ export default function OrderPage(props: { orderId: string }) {
         </div>
 
         {/* checkout  */}
-        <div className="grid grid-cols-12 gap-6 p-6 col-span-12 p-3 border-border border-2 rounded-3xl bg-bg-card">
+        <div className="grid grid-cols-12 gap-6 p-6 col-span-12  border-border border-2 rounded-3xl bg-bg-card">
           <div className="col-span-12 flex justify-between text-2xl">
             <h4 className="text-primary">Order number</h4>
             <h4 className="text-accent-green ">{newOrder?.orderId}</h4>
