@@ -16,24 +16,29 @@ export default function LogInInfo() {
       <>
         <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild>
-            <button className="w-10 h-10 rounded-full">
+            <button className=" ">
               {session.user.name}
             </button>
           </DropdownMenu.Trigger>
 
-          <DropdownMenu.Portal>
-            <DropdownMenu.Content>
-              <DropdownMenu.Item><Link href="/profile">profile</Link></DropdownMenu.Item>
+          <DropdownMenu.Portal >
 
-              <DropdownMenu.Item><Link href="/accountSettings">setting</Link></DropdownMenu.Item>
+            <DropdownMenu.Content className="grid gap-3  text-primary border-2 rounded-b-3xl p-6 bg-bg-dark">
+            
+              <DropdownMenu.Item className="text-xl m-2 "><Link href="/profile">profile</Link></DropdownMenu.Item>
 
-              <DropdownMenu.Item><Link href="/profileOrders">orders</Link></DropdownMenu.Item>
+              <DropdownMenu.Item className="text-xl m-2 "><Link href="/accountSettings">setting</Link></DropdownMenu.Item>
 
-              <DropdownMenu.Item><Link href="/wishlist">wishlist</Link></DropdownMenu.Item>
+              <DropdownMenu.Item className="text-xl m-2 "><Link href="/profileOrders">orders</Link></DropdownMenu.Item>
 
-              <DropdownMenu.Item><button onClick={()=>{signOut()}}>Log Out</button></DropdownMenu.Item>
+              <DropdownMenu.Item className="text-xl m-2 "><Link href="/wishlist">wishlist</Link></DropdownMenu.Item>
+
+              <DropdownMenu.Item className=" m-2 "><button  onClick={()=>{signOut()}}>Log Out</button></DropdownMenu.Item>
+           
             </DropdownMenu.Content>
+          
           </DropdownMenu.Portal>
+        
         </DropdownMenu.Root>
       </>
     );

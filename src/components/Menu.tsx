@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import LogInInfo from "./LogInInfo";
 import { Heart, ShoppingCart } from "lucide-react";
 
-import { SessionProvider } from "next-auth/react";
+
 
 export default function Menu() {
   return (
