@@ -16,7 +16,7 @@ export default function LogInInfo() {
       <>
         <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild>
-            <button className=" ">
+            <button className="cursor-pointer ">
               {session.user.name}
             </button>
           </DropdownMenu.Trigger>
@@ -33,7 +33,7 @@ export default function LogInInfo() {
 
               <DropdownMenu.Item className="text-xl m-2 "><Link href="/wishlist">wishlist</Link></DropdownMenu.Item>
 
-              <DropdownMenu.Item className=" m-2 "><button  onClick={()=>{signOut()}}>Log Out</button></DropdownMenu.Item>
+              <DropdownMenu.Item className=" m-2 "><button className="cursor-pointer" onClick={()=>{signOut()}}>Log Out</button></DropdownMenu.Item>
            
             </DropdownMenu.Content>
           

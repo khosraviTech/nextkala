@@ -31,7 +31,7 @@ export default function AboutMe() {
           className="overflow-hidden "
         />
       </div>
-      <button className=" max-lg:col-span-12 lg:col-start-7 lg:col-span-6 text-primary text-sm inline-flex w-full items-center justify-between border pl-4 border-accent-green rounded-2xl p-2">
+      <button className="cursor-pointer max-lg:col-span-12 lg:col-start-7 lg:col-span-6 text-primary text-sm inline-flex w-full items-center justify-between border pl-4 border-accent-green rounded-2xl p-2">
   More About Me
   <ArrowRight className="scale-90 text-accent-green" />
 </button>

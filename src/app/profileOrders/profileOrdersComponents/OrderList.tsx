@@ -49,7 +49,7 @@ export default function OrderList() {
               </div>
             
               <Link href={`/order/${order.orderId}`} className="col-span-4">
-                <button className="text-primary border-border border-3 rounded-2xl p-2 text-center">
+                <button className="cursor-pointer text-primary border-border border-3 rounded-2xl p-2 text-center">
                   Order Details
                 </button>
               </Link>

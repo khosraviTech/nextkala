@@ -36,7 +36,8 @@ export default function ProductDetails(props: { product: any }) {
       </div>
 
       {/* buttons */}
-      <button
+      <button 
+      
         onClick={() =>
           dispatch(
             addToCart({
@@ -49,13 +50,15 @@ export default function ProductDetails(props: { product: any }) {
             }),
           )
         }
-        className="flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100"
+        className=" cursor-pointer flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100"
       >
         <ShoppingCart size={18} />
         Add to Cart
       </button>
 
       <button
+
+
         onClick={() => {
           dispatch(
             addToWishlist({
@@ -68,7 +71,7 @@ export default function ProductDetails(props: { product: any }) {
             }),
           );
         }}
-        className="p-2 rounded-full hover:bg-gray-100 flex items-center gap-2"
+        className="cursor-pointer p-2 rounded-full hover:bg-gray-100 flex items-center gap-2"
       >
         <Heart className="h-5 w-5" />
         Add to Wish list

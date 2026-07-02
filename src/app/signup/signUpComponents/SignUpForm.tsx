@@ -174,7 +174,7 @@ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
           </div>
 
           {/* Create Account Button */}
-          <button  type='submit' className="w-full bg-black text-white py-2 rounded-md mt-2">
+          <button  type='submit' className="cursor-pointer w-full bg-black text-white py-2 rounded-md mt-2">
             Create Account
           </button>
           {/* Error message */}

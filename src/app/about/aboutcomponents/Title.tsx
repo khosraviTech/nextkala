@@ -42,12 +42,12 @@ export default function Title() {
         </p>
 
         <div className="flex gap-4 pt-2">
-          <button className="flex-1 inline-flex items-center justify-between p-4 text-xl bg-warning-orange text-black rounded-full">
+          <button className="cursor-pointer flex-1 inline-flex items-center justify-between p-4 text-xl bg-warning-orange text-black rounded-full">
             Download CV
             <Download />
           </button>
 
-          <button className="flex-1 inline-flex items-center justify-between p-4 text-xl bg-bg-dark border-2 border-accent-green rounded-full text-secondary">
+          <button className="cursor-pointer flex-1 inline-flex items-center justify-between p-4 text-xl bg-bg-dark border-2 border-accent-green rounded-full text-secondary">
             Contact Me
             <ArrowRight className="text-accent-green" />
           </button>

@@ -75,7 +75,7 @@ export default function ProductList({ products }: { products: Product[] }) {
                   }),
                 )
               }
-              className="flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100"
+              className="cursor-pointer flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100"
             >
               <ShoppingCart size={18} />
               Add to Cart
@@ -94,7 +94,7 @@ export default function ProductList({ products }: { products: Product[] }) {
                   }),
                 );
               }}
-              className="p-2 rounded-full hover:bg-gray-100"
+              className="cursor-pointer p-2 rounded-full hover:bg-gray-100"
             >
               <Heart className="h-5 w-5" />
               Add to Wish list
@@ -110,7 +110,7 @@ export default function ProductList({ products }: { products: Product[] }) {
         <button
           onClick={() => goToPage(currentPage - 1)}
           disabled={currentPage === 1}
-          className="px-4 py-2 border rounded disabled:opacity-30"
+          className=" cursor-pointer px-4 py-2 border rounded disabled:opacity-30"
         >
           Prev
         </button>
@@ -140,7 +140,7 @@ export default function ProductList({ products }: { products: Product[] }) {
         <button
           onClick={() => goToPage(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 border rounded disabled:opacity-30"
+          className="cursor-pointer px-4 py-2 border rounded disabled:opacity-30"
         >
           Next
         </button>

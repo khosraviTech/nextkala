@@ -80,7 +80,7 @@ export default function Cart() {
 
               {/* quantity part & buttons */}
               <div className="col-span-3 inline-flex items-center  text-primary">
-                <button className="border-2 border-border rounded-l-xl text-secondary text-xl p-2"
+                <button className="cursor-pointer border-2 border-border rounded-l-xl text-secondary text-xl p-2"
                   onClick={() =>
                     dispatch(
                       setQuantity({
@@ -93,7 +93,7 @@ export default function Cart() {
                   -
                 </button>
                 <h2 className="border-2 border-border text-secondary text-xl p-2 ">{item.quantity}</h2>
-                <button className="border-2 border-border rounded-r-xl text-secondary text-xl p-2"
+                <button className="cursor-pointer border-2 border-border rounded-r-xl text-secondary text-xl p-2"
                   onClick={() =>
                     dispatch(
                       setQuantity({
@@ -114,7 +114,7 @@ export default function Cart() {
 
               {/* delet item part- trash icon */}
               <button
-                className="col-span-1 flex  items-center  text-secondary pl-3"
+                className="cursor-pointer col-span-1 flex  items-center  text-secondary pl-3"
                 onClick={() => dispatch(DeleteFromCart(item.id))}
               >
                 <Trash2 className="scale-100 shrink-0 " />
@@ -125,14 +125,14 @@ export default function Cart() {
           {/* footer of product list */}
           <div className="col-span-12 flex justify-between items-center ">
             <Link href="/">
-              <button className="inline-flex items-center gap-2 p-3 rounded-2xl border-2 border-border text-secondary">
+              <button className="cursor-pointer inline-flex items-center gap-2 p-3 rounded-2xl border-2 border-border text-secondary">
                 <MoveLeft />
                 continue shopping
               </button>
             </Link>
-            <button
+            <button 
               onClick={() => dispatch(cleanCart())}
-              className="inline-flex items-center gap-2 p-3 rounded-2xl border-2 border-border text-secondary"
+              className="cursor-pointer inline-flex items-center gap-2 p-3 rounded-2xl border-2 border-border text-secondary"
             >
               clear Cart
               <Trash2 className="scale-80" />
@@ -159,10 +159,10 @@ export default function Cart() {
           </div>
 
           {/* checkout button */}
-          <div className="col-span-12 border-2 border-accent-green  bg-accent-green rounded-2xl flex justify-center items-center font-bold ">
+          <div className="col-start-2 col-span-10 cursor-pointer m-0 p-0 border-2 border-accent-green  bg-accent-green rounded-2xl flex justify-center items-center font-bold ">
             {/* // TODO: Enable checkout button after user authentication is implemented in userSlice. */}
-            <SessionProvider>
-              <ProceedToCheckout itemCounter={itemCounter} />
+            <SessionProvider >
+              <ProceedToCheckout  itemCounter={itemCounter} />
             </SessionProvider>
           </div>
         </div>

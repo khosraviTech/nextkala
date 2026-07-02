@@ -88,7 +88,7 @@ useEffect(() => {
           }}
         />
         <button
-        className="col-start-10 col-span-3 border-2 rounded-2xl text-primary border-amber-50 p-2 "
+        className="cursor-pointer col-start-10 col-span-3 border-2 rounded-2xl text-primary border-amber-50 p-2 "
           onClick={() => {
             saveHandler();
           }}
@@ -112,7 +112,7 @@ useEffect(() => {
         <input className="col-span-12  text-secondary border-2  rounded-2xl p-2" type="text" name="confirmPassword" />
         
         <button
-        className="col-start-9 col-span-4 border-2 rounded-2xl text-primary border-amber-50 p-2 "
+        className="cursor-pointer col-start-9 col-span-4 border-2 rounded-2xl text-primary border-amber-50 p-2 "
           onClick={() =>
             alert(
               "This App has not backend yet it's just front-end, so the passowrd is imutable",

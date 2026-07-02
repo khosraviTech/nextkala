@@ -49,14 +49,14 @@ export default function Wishlist() {
                 )
 
               }
-              className="col-span-6 flex items-center gap-2 p-3  rounded-3xl bg-accent-green text-primary font-medium"
+              className="cursor-pointer col-span-6 flex items-center gap-2 p-3  rounded-3xl bg-accent-green text-primary font-medium"
             >
               <ShoppingCart size={18} />
               Add to Cart
             </button>
 
             <button
-            className=" col-span-6  rounded-3xl p-3 text-primary bg-red-500 font-medium"
+            className="cursor-pointer col-span-6  rounded-3xl p-3 text-primary bg-red-500 font-medium"
              onClick={() => dispatch(DeleteFromWishlist(item.id))}>
               Delete from wishlist
             </button>
