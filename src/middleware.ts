@@ -14,7 +14,7 @@ export async function middleware(request: NextRequest) {//NOTE: work with requen
     pathname.startsWith("/profile") ||
     pathname.startsWith("/profileOrders") ||
     pathname.startsWith("/accountSettings") ||
-     pathname.startsWith("/order") 
+    pathname.startsWith("/order")
   ) {
     if (!token) {
       return NextResponse.redirect(new URL("/login", request.url));
