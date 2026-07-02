@@ -3,7 +3,7 @@ import { ArrowRight, Download } from "lucide-react";
 
 export default function Title() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-6 p-6 border-2 border-blue-500 rounded-2xl">
+    <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-6 p-6 border-2 border-accent-green rounded-2xl">
       {/* Image */}
       <div className="grid-cols-1  lg:col-span-5 flex items-center justify-center">
         <div className="w-75 h-75 rounded-full overflow-hidden border-2 border-blue-950 shadow-lg">
@@ -47,7 +47,7 @@ export default function Title() {
             <Download />
           </button>
 
-          <button className="cursor-pointer flex-1 inline-flex items-center justify-between p-4 text-xl bg-bg-dark border-2 border-accent-green rounded-full text-secondary">
+          <button className=" cursor-pointer flex-1 inline-flex items-center justify-between p-4 text-xl bg-bg-dark border-2 border-accent-green rounded-full text-secondary">
             Contact Me
             <ArrowRight className="text-accent-green" />
           </button>

@@ -41,7 +41,7 @@ const futureInterests: FutureInterest[] = [
 
 export default function CurrentFocus() {
   return (
-    <div className="h-full border border-purple-500 rounded-2xl p-6 grid grid-cols-12 gap-6">
+    <div className="h-full border border-accent-green rounded-2xl p-6 grid grid-cols-12 gap-6">
       {/* Title */}
       <div className="col-span-12 flex items-center gap-4">
         <Target className="text-accent-green" size={28} />
