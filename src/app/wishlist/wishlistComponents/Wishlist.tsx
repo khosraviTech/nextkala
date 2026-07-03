@@ -18,7 +18,7 @@ export default function Wishlist() {
   } else {
     return (
       <>
-        <div className="border-border borde-2 p-12 flex gap-6">
+        <div className=" p-12 flex flex-wrap gap-12">
           {wishlistItems.map((item) => (
             <div
               key={item.title}
