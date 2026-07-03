@@ -40,8 +40,9 @@ export default function LogInForm() {
 
     if (inputUser) {
       alert("welcome");
-      router.push("/");
       router.refresh();
+      router.push("/");
+      
       return;
     }
 
