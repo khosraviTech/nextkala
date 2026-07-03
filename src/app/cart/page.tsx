@@ -30,9 +30,9 @@ export default function Cart() {
 
   return (
     <>
-      <div className="grid grid-cols-12 gap-6 p-12 h-full ">
+      <div className="max-lg:grid-cols-2 grid grid-cols-12 gap-6 p-12 h-full ">
         {/* title of page */}
-        <div className="ml-3 col-span-12 ">
+        <div className=" ml-3 col-span-12 max-lg:col-span-2">
           <h1 className="inline-flex items-center gap-2 text-primary text-4xl mb-3">
             <ShoppingCart className="text-accent-green" />
             Your Cart
@@ -43,7 +43,7 @@ export default function Cart() {
         </div>
 
         {/* products list */}
-        <div className="grid gird-cols-12 col-span-8 border-2 border-border rounded-3xl p-6 bg-bg-card">
+        <div className="max-lg:col-span-2  grid gird-cols-12 col-span-8 border-2 border-border rounded-3xl p-6 bg-bg-card">
           {/* product list col names */}
           {cartItems.length === 0 ? (
             <h1 className="col-span-12 flex justify-center text-primary text-2xl font-bold p-6">
@@ -141,7 +141,7 @@ export default function Cart() {
         </div>
 
         {/* order summery & Proceed to checkout */}
-        <div className="grid grid-cols-12 col-span-4 border-2 rounded-3xl bg-bg-card border-border p-6 ">
+        <div className="max-lg:col-span-2 max-lg:gap-10 grid grid-cols-12 col-span-4 border-2 rounded-3xl bg-bg-card border-border p-6 ">
           <h1 className="col-span-12 text-primary text-3xl">Order Summery</h1>
           <div className="col-span-12 flex justify-between text-secondary text-xl">
             <h3>
@@ -159,7 +159,7 @@ export default function Cart() {
           </div>
 
           {/* checkout button */}
-          <div className="col-start-2 col-span-10 cursor-pointer m-0 p-0 border-2 border-accent-green  bg-accent-green rounded-2xl flex justify-center items-center font-bold ">
+          <div className="max-lg:col-span-12 max-lg:p-4 col-start-2 col-span-10 cursor-pointer m-0 p-0 outline-0 border-2 border-accent-green  bg-accent-green rounded-2xl flex justify-center items-center font-bold ">
             {/* // TODO: Enable checkout button after user authentication is implemented in userSlice. */}
             <SessionProvider >
               <ProceedToCheckout  itemCounter={itemCounter} />
@@ -168,7 +168,7 @@ export default function Cart() {
         </div>
 
         {/* our shopping values*/}
-        <div className="p-6 pl-12 pr-12 col-span-12 flex justify-between border-2 border-border   bg-bg-card rounded-3xl ">
+        <div className=" max-lg:col-span-2 max-lg:flex-col max-lg:gap-5 max-lg:justify-center max-lg:items-center max-lg:space-y-5 p-6 pl-12 pr-12 col-span-12 flex justify-between border-2 border-border   bg-bg-card rounded-3xl ">
           <div className="inline-flex items-center gap-3 ">
             <Truck className="scale-150 text-accent-green" />
             <div className="flex-col items-center">

@@ -26,7 +26,7 @@ export default function Menu() {
 
         {/* Cart Icon */}
         <Link href="/cart" className="relative flex items-center">
-          <ShoppingCart className='scale-120' />
+          <ShoppingCart className='scale-120 text-green-600' />
 
           <div className="absolute -top-2 -right-1 ">
             <CartItemCounter  />
@@ -35,7 +35,7 @@ export default function Menu() {
 
         {/* Wishlist Icon */}
         <Link href="/wishlist">
-          <Heart />
+          <Heart className="text-pink-600 scale-150 mr-5" />
         </Link>
       </div>
     </div>

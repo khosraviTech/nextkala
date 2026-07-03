@@ -26,7 +26,7 @@ export default function ProceedToCheckout(props: { itemCounter: number }) {
  
     return (
       <>
-        <button className="cursor-pointer p-0 m-0 w-full"
+        <button className="cursor-pointer p-0 m-0 w-full max-lg:text-2xl"
           onClick={() => {
             alert("But your shopping cart is empty!");
           }}
@@ -40,7 +40,7 @@ export default function ProceedToCheckout(props: { itemCounter: number }) {
     return (
       <>
         <button 
-        className="cursor-pointer p-0 m-0 w-full"
+        className="cursor-pointer p-0 m-0 w-full max-lg:text-2xl "
           onClick={() => {
             const id = uuidv4();
             dispatch(
@@ -70,7 +70,7 @@ export default function ProceedToCheckout(props: { itemCounter: number }) {
     return (
       <>
         <button
-        className="cursor-pointer p-0 m-0 w-full"
+        className="cursor-pointer p-0 m-0 w-full max-lg:text-2xl"
           onClick={() => {
             alert("Please login first! then you can proceed to checkout");
           }}
