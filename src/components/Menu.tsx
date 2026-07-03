@@ -3,7 +3,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import LogInInfo from "./LogInInfo";
 import { Heart, ShoppingCart } from "lucide-react";
-import SearchBar from "./SearchBar";
+import CartItemCounter from "./CartItemCounter";
 
 export default function Menu() {
   return (
@@ -23,9 +23,14 @@ export default function Menu() {
 
         {/* Login User */}
         <LogInInfo />
+
         {/* Cart Icon */}
-        <Link href="/cart">
-          <ShoppingCart />
+        <Link href="/cart" className="relative flex items-center">
+          <ShoppingCart className='scale-120' />
+
+          <div className="absolute -top-2 -right-1 ">
+            <CartItemCounter  />
+          </div>
         </Link>
 
         {/* Wishlist Icon */}
