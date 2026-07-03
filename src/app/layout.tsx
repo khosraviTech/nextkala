@@ -17,10 +17,14 @@ export default function RootLayout({
     <html lang="en">
       
       <body className="bg-bg-dark">
-        <StoreProvider>          
-        <Header />
+        
+        <StoreProvider> 
+              <div className="sticky top-0 z-50"> 
+        <Header  />
+        </div>  
         {children}
       </StoreProvider>
+      
       </body>
     </html>
   );
