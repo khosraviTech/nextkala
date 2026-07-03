@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
 
@@ -19,26 +21,22 @@ export default function Title() {
 
       {/* Content */}
       <div className="grid-cols-1 lg:col-span-7 flex flex-col justify-center gap-4">
-        <h3 className="text-xl text-accent-green">
-          👋 Hi, I&apos;m
-        </h3>
+        <h3 className="text-xl text-accent-green">👋 Hi, I&apos;m</h3>
 
         <h1 className="text-6xl text-primary leading-tight xl:whitespace-nowrap">
           Amir Mohammad
         </h1>
 
-        <h1 className="text-6xl text-warning-orange leading-tight">
-          Khosravi
-        </h1>
+        <h1 className="text-6xl text-warning-orange leading-tight">Khosravi</h1>
 
         <h3 className="text-2xl text-accent-green">
-          <span className="font-bold text-warning-orange">|</span>{" "}
-          Front-End Developer
+          <span className="font-bold text-warning-orange">|</span> Front-End
+          Developer
         </h3>
 
         <p className="text-xl text-secondary">
-          I build modern and scalable web applications with a focus on
-          usability and performance.
+          I build modern and scalable web applications with a focus on usability
+          and performance.
         </p>
 
         <div className="flex gap-4 pt-2">
@@ -47,13 +45,19 @@ export default function Title() {
             <Download />
           </button>
 
-          <button className=" cursor-pointer flex-1 inline-flex items-center justify-between p-4 text-xl bg-bg-dark border-2 border-accent-green rounded-full text-secondary">
+          <button
+            onClick={() => {
+              window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth",
+              });
+            }}
+            className=" cursor-pointer flex-1 inline-flex items-center justify-between p-4 text-xl bg-bg-dark border-2 border-accent-green rounded-full text-secondary"
+          >
             Contact Me
             <ArrowRight className="text-accent-green" />
           </button>
         </div>
-
-        
       </div>
     </div>
   );

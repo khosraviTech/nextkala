@@ -106,7 +106,7 @@ export default function ProductList({ products }: { products: Product[] }) {
       </div>
 
       {/*Pagination buttons */}
-      <div className="text-center">
+      <div className="text-center p-10">
         {/* prev button */}
 
         <button
