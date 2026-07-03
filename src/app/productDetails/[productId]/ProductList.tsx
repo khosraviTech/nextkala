@@ -40,28 +40,29 @@ export default function ProductList({ products }: { products: Product[] }) {
     <>
       {/* products in selected page */}
 
-      <div className="flex flex-wrap justify-center gap-6 p-12">
+      <div className="flex flex-wrap justify-center items-center gap-6 p-12">
         {paginatedProducts.map((product) => (
           <div
             key={product.id}
-            className="text-amber-50 text-center  bg-blue-950 p-5 outline-0 border-2 border-blue-950 rounded-3xl shadow-2xl  "
-          ><Link href={`/productDetails/${product.id}`}>
-            <div>
+            className=" grid grid-cols-2 gap-5 text-amber-50 text-center  bg-blue-950 p-5 outline-0 border-2 border-blue-950 rounded-3xl shadow-2xl  "
+          >
+            <Link className="col-span-2" href={`/productDetails/${product.id}`}>
               <Image
                 src={product.images[0]}
                 alt={`${product.title} image`}
                 width={300}
                 height={300}
               />
-            </div>
             </Link>
-            <h1>{product.title}</h1>
-            <h2 className="flex justify-center">
-              <DollarSign className="size-5" />
-              {product.price}
-            </h2>
-            <h3>⭐{product.rating}</h3>
 
+            <h1 className="col-span-2">{product.title}</h1>
+            <h2 className=" col-span-1 flex justify-center">
+              $ {product.price}
+            </h2>
+            <h3 className="col-span-1">⭐{product.rating}</h3>
+
+
+            {/* add to cart button */}
             <button
               onClick={() =>
                 dispatch(
@@ -75,12 +76,13 @@ export default function ProductList({ products }: { products: Product[] }) {
                   }),
                 )
               }
-              className="cursor-pointer flex items-center gap-2 rounded-md px-4 py-2 hover:bg-gray-100"
+              className="cursor-pointer flex items-center gap-2 rounded-2xl px-4 py-2 hover:text-accent-green border-2"
             >
               <ShoppingCart size={18} />
               Add to Cart
             </button>
 
+            {/* add to wishlist button */}
             <button
               onClick={() => {
                 dispatch(
@@ -94,7 +96,7 @@ export default function ProductList({ products }: { products: Product[] }) {
                   }),
                 );
               }}
-              className="cursor-pointer p-2 rounded-full hover:bg-gray-100"
+              className="cursor-pointer p-2 rounded-2xl hover:text-pink-600 border-2 flex items-center gap-2"
             >
               <Heart className="h-5 w-5" />
               Add to Wish list
