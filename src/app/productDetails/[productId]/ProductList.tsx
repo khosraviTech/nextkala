@@ -1,5 +1,5 @@
 "use client";
-import { DollarSign } from "lucide-react";
+
 import { Heart } from "lucide-react";
 import { Product } from "@/types/product";
 import { useState } from "react";
