@@ -40,7 +40,7 @@ export default function ProductList({ products }: { products: Product[] }) {
     <>
       {/* products in selected page */}
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-6 p-12">
         {paginatedProducts.map((product) => (
           <div
             key={product.id}
@@ -110,7 +110,7 @@ export default function ProductList({ products }: { products: Product[] }) {
         <button
           onClick={() => goToPage(currentPage - 1)}
           disabled={currentPage === 1}
-          className=" cursor-pointer px-4 py-2 border rounded disabled:opacity-30"
+          className=" cursor-pointer px-4 py-2 border rounded disabled:opacity-60 disabled:cursor-no-drop text-white"
         >
           Prev
         </button>
@@ -127,7 +127,7 @@ export default function ProductList({ products }: { products: Product[] }) {
               className={`w-10 h-10 rounded ${
                 pageNumber === currentPage
                   ? "bg-red-500 text-white"
-                  : "border hover:bg-gray-100"
+                  : "border hover:bg-gray-100 text-white"
               }`}
             >
               {pageNumber}
@@ -140,7 +140,7 @@ export default function ProductList({ products }: { products: Product[] }) {
         <button
           onClick={() => goToPage(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="cursor-pointer px-4 py-2 border rounded disabled:opacity-30"
+          className="cursor-pointer px-4 py-2 border rounded disabled:opacity-60 text-white disabled:cursor-no-drop"
         >
           Next
         </button>

@@ -7,7 +7,6 @@ export default async function Home() {
 
   return (
     <main>
-      <h1 className="text-center">All Products:</h1>
       <ProductList products={productsData.products} />
     </main>
   );
