@@ -4,6 +4,7 @@ import CurrentFocus from "./aboutcomponents/CurrentFocus";
 import Education from "./aboutcomponents/Education";
 import MySkills from "./aboutcomponents/MySkills";
 import Title from "./aboutcomponents/Title";
+import Projects from "./aboutcomponents/Projects";
 
 export default function About() {
   return (
@@ -26,6 +27,10 @@ export default function About() {
 
   <div className=" col-span-1  lg:col-span-12">
     <MySkills />
+  </div>
+
+  <div className="col-span-1  lg:col-span-12">
+    <Projects/>
   </div>
 
   <div className=" col-span-1  lg:col-span-12">
