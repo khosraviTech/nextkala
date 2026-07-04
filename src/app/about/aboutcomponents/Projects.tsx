@@ -1,11 +1,13 @@
 import { project } from "@/types/project";
+import { FolderClosed, MonitorPlay } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects: project[] = [
   {
     title: "NEXTKALA",
     description:
-      "A modern platform built with Next.js offering a fast and responsive shopping experience",
+      "A modern platform built with Next.js offering a fast and responsive shopping experience.",
     tags: [
       "Next.js",
       "TypeScript",
@@ -52,31 +54,72 @@ const projects: project[] = [
 export default function Projects() {
   return (
     <>
-      <div className="border-2 border-accent-green rounded-3xl p-6 flex gap-8">
+      <div className="border-2 border-accent-green rounded-3xl p-4 grid grid-cols-12 gap-6">
+        <div className="col-span-12 inline-flex items-center gap-4 ml-2">
+          <FolderClosed className="text-accent-green scale-150" />
+          <h1 className="text-primary text-3xl"> Featured Projects</h1>
+        </div>
 
-        {projects.map((project) => (
-          
-          <div key={project.title} className="text-primary">
-            <Image
-              src={project.image}
-              width={500}
-              height={500}
-              alt="Picture of the project"
-              className="rounded-3xl"
-            />
+        <div className=" col-span-12 flex items-center gap-4">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="grid grid-cols-12 text-primary bg-bg-card border border-border rounded-3xl p-3 gap-2"
+            >
+              {/* project image */}
+              <Image
+                src={project.image}
+                width={500}
+                height={500}
+                alt="Picture of the project"
+                className=" col-span-12 rounded-3xl"
+              />
+              {/* project title */}
+              <h1 className="col-span-12 p-2 text-2xl font-semibold">
+                {project.title}
+              </h1>
+              {/* project description */}
+              <h2 className="col-span-12 p-2">{project.description}</h2>
 
-            <h1>{project.title}</h1>
+              {/* project tags */}
+              <div className="col-span-12 p-2 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <div
+                    key={tag}
+                    className="border border-border rounded-3xl p-2 text-sm"
+                  >
+                    {tag}
+                  </div>
+                ))}
+              </div>
+              
+              
+              {/*project  demo Link */}
+              <Link
+                href={project.address}
+                className="border-border border  col-span-6 rounded-xl inline-flex items-center gap-2 justify-between p-4 m-2"
+              >
+                Demo <MonitorPlay />
+              </Link>
 
-            <h2>{project.description}</h2>
 
-            {project.tags.map((tag) => (
-              <div key={tag}>{tag}</div>
-            ))}
 
-            <div>{project.address}</div>
-            <div>{project.gitHubAddress}</div>
-          </div>
-        ))}
+              {/* project github link */}
+              <Link
+                href={project.gitHubAddress}
+                className="border-border border col-span-6 rounded-xl inline-flex items-center gap-2 justify-between p-4 m-2"
+              >
+                GitHub{" "}
+                <Image
+                  src="/toolLogo/github-white-icon.svg"
+                  width={20}
+                  height={20}
+                  alt="Picture of the project"
+                />
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
