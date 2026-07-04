@@ -9,6 +9,8 @@ export default function Menu() {
   return (
     <div className="flex items-center justify-between gap-6  p-2 bg-white w-full   shadow-lg outline-0 ">
       <div className="flex items-center gap-6 max-sm:gap-2">
+        
+        
         <Link href="/" >
           <Logo />
         </Link>
