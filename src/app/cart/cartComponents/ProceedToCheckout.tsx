@@ -36,7 +36,7 @@ export default function ProceedToCheckout(props: { itemCounter: number }) {
       </>
     );
   }
-  if (session?.user && props.itemCounter > 0) {
+  else if (status === "authenticated") {
     return (
       <>
         <button 
