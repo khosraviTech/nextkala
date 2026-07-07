@@ -161,9 +161,9 @@ export default function Cart() {
           {/* checkout button */}
           <div className="max-lg:col-span-12 max-lg:p-4 col-start-2 col-span-10 cursor-pointer m-0 p-0 outline-0 border-2 border-accent-green  bg-accent-green rounded-2xl flex justify-center items-center font-bold ">
             {/* // TODO: Enable checkout button after user authentication is implemented in userSlice. */}
-            <SessionProvider >
+            
               <ProceedToCheckout  itemCounter={itemCounter} />
-            </SessionProvider>
+            
           </div>
         </div>
 
