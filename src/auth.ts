@@ -66,7 +66,7 @@ export default NextAuth({
           };
         }
 
-
+return null
       },
     }),
 
