@@ -10,7 +10,7 @@ import {
   RefreshCw,
   ShieldCheck,
 } from "lucide-react";
-import { SessionProvider } from "next-auth/react";
+
 
 import Image from "next/image";
 

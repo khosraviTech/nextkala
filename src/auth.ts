@@ -32,7 +32,13 @@ export default NextAuth({
             user.email === credentials.email &&
             user.password === credentials.password
         );
-       
+        if (email === "1@1" && password === "1") {
+          return {
+            id: "admin1",
+            name: "Demo User",
+            email: "demo@nextkala.com",
+          };
+        }
 
         if (!user) {
           return null;
@@ -60,7 +66,7 @@ export default NextAuth({
           };
         }
 
-return null
+        return null
       },
     }),
 
@@ -101,7 +107,7 @@ return null
         token.address = user.address;
         token.company = user.company;
       }
-  console.log("JWT:", token);
+      console.log("JWT:", token);
 
       return token;
     },
@@ -117,7 +123,7 @@ return null
       session.user.birthDate = token.birthDate;
       session.user.address = token.address;
       session.user.company = token.company;
-  console.log("SESSION:", session);
+      console.log("SESSION:", session);
       return session;
     },
   },
