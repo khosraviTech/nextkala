@@ -12,7 +12,7 @@ export default function ProceedToCheckout(props: { itemCounter: number }) {
   const dispatch = useAppDispatch();
 
   const router = useRouter();
-  const { data: session } = useSession();
+  const { data: session ,status } = useSession();
   const cartItems = useAppSelector((state) => state.cart);
   const { cleanCart } = cartSlice.actions;
   const { addOrder } = orederSlice.actions;
@@ -72,6 +72,8 @@ export default function ProceedToCheckout(props: { itemCounter: number }) {
         <button
         className="cursor-pointer p-0 m-0 w-full max-lg:text-2xl"
           onClick={() => {
+            console.log("CLICK SESSION:", session);
+  console.log("CLICK STATUS:", status);
             alert("Please login first! then you can proceed to checkout");
           }}
         >
