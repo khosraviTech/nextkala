@@ -15,7 +15,7 @@ const projects: project[] = [
       "Tailwind CSS",
       "NextAuth",
     ],
-    address: "http://localhost:3000/",
+    address: "https://nextkala.vercel.app/",
     image: "/projectImages/NEXTKALA2.JPG",
     gitHubAddress: "https://github.com/khosraviTech/nextkala",
   },

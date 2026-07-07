@@ -14,7 +14,7 @@ export default function Title() {
             width={300}
             height={300}
             alt="Picture of Amir Mohammad Khosravi"
-            className="w-full h-full object-cover"
+            className=""
           />
         </div>
       </div>
