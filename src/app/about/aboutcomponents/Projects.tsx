@@ -16,7 +16,7 @@ const projects: project[] = [
       "NextAuth",
     ],
     address: "http://localhost:3000/",
-    image: "/projectImages/NEXTKALA.JPG",
+    image: "/projectImages/NEXTKALA2.JPG",
     gitHubAddress: "https://github.com/khosraviTech/nextkala",
   },
   
