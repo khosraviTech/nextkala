@@ -10,7 +10,7 @@ export default function Title() {
       <div className="grid-cols-1  lg:col-span-5 flex items-center justify-center">
         <div className="w-75 h-75 rounded-full overflow-hidden border-2 border-blue-950 shadow-lg">
           <Image
-            src="/khosravi_cap.jpg"
+            src="/Khosravi_cap.jpg"
             width={300}
             height={300}
             alt="Picture of Amir Mohammad Khosravi"
