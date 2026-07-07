@@ -29,8 +29,8 @@ export default function Settings() {
 useEffect(() => {
   if (!session?.user) return;
 
-  setFirstName(session?.user.firstName);
-  setLastName(session?.user.lastName);
+  setFirstName(session?.user.firstName ?? "");
+  setLastName(session?.user.lastName ?? "");
   setEmail(session?.user.email ?? "");
 }, [session]);
 
