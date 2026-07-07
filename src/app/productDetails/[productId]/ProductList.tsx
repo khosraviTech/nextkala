@@ -44,7 +44,7 @@ export default function ProductList({ products }: { products: Product[] }) {
         {paginatedProducts.map((product) => (
           <div
             key={product.id}
-            className=" grid grid-cols-2 gap-5 text-amber-50 text-center  bg-blue-950 p-5 outline-0 border-2 border-blue-950 rounded-3xl shadow-2xl  "
+            className=" grid grid-cols-2 gap-5  border-border text-amber-50 text-center  bg-blue-950 p-5 outline-0 border-2 border-blue-950 rounded-3xl shadow-2xl  "
           >
             <Link className="col-span-2" href={`/productDetails/${product.id}`}>
               <Image

@@ -23,9 +23,9 @@ const connections: connection[] = [
   },
   {
     name: "Linkdin",
-    address: "Linkdin address",
+    address: "Amir khosravi",
     iconSrc: "/contactLogo/linkedin-app-icon.svg",
-    link: "",
+    link: "https://linkedin.com/in/amir-khosravi-069594420",
   },
   {
     name: "Telegram",
@@ -35,7 +35,7 @@ const connections: connection[] = [
   },
   {
     name: "Bale",
-    address: "Bale address",
+    address: "@mohmmd_khosravi",
     iconSrc: "/contactLogo/Bale-green.svg",
     link: "",
   },

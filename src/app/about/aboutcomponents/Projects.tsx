@@ -16,51 +16,25 @@ const projects: project[] = [
       "NextAuth",
     ],
     address: "http://localhost:3000/",
-    image: "/projectImages/NEXTKALA.JPG",
+    image: "/projectImages/NEXTKALA2.JPG",
     gitHubAddress: "https://github.com/khosraviTech/nextkala",
   },
-  {
-    title: "NEXTKALA",
-    description:
-      "A modern platform built with Next.js offering a fast and responsive shopping experience",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Redux Toolkit",
-      "Tailwind CSS",
-      "NextAuth",
-    ],
-    address: "http://localhost:3000/",
-    image: "/projectImages/NEXTKALA.JPG",
-    gitHubAddress: "https://github.com/khosraviTech/nextkala",
-  },
-  {
-    title: "NEXTKALA",
-    description:
-      "A modern platform built with Next.js offering a fast and responsive shopping experience",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Redux Toolkit",
-      "Tailwind CSS",
-      "NextAuth",
-    ],
-    address: "http://localhost:3000/",
-    image: "/projectImages/NEXTKALA.JPG",
-    gitHubAddress: "https://github.com/khosraviTech/nextkala",
-  },
+  
 ];
 
 export default function Projects() {
   return (
     <>
       <div className="border-2 border-accent-green rounded-3xl p-4 grid grid-cols-12 gap-6">
+       
+       
+       
         <div className="col-span-12 inline-flex items-center gap-4 ml-2">
           <FolderClosed className="text-accent-green scale-150" />
           <h1 className="text-primary text-3xl"> Featured Projects</h1>
         </div>
 
-        <div className=" col-span-12 flex items-center gap-4">
+        <div className=" col-span-12 flex items-center gap-4 p-0 m-0">
           {projects.map((project) => (
             <div
               key={project.title}
@@ -69,8 +43,8 @@ export default function Projects() {
               {/* project image */}
               <Image
                 src={project.image}
-                width={500}
-                height={500}
+                width={700}
+                height={700}
                 alt="Picture of the project"
                 className=" col-span-12 rounded-3xl"
               />
