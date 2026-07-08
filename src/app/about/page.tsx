@@ -33,7 +33,7 @@ export default function About() {
     <Projects/>
   </div>
 
-  <div className=" col-span-1  lg:col-span-12">
+  <div className=" col-span-1  lg:col-span-12 ">
     <GetInTouch />
   </div>
 </div>

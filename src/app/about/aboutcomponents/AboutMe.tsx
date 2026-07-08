@@ -5,7 +5,7 @@ import { UserRound } from "lucide-react";
 
 export default function AboutMe() {
   return (
-    <div className="h-full grid border-2 grid-cols-12 gap-6 p-6 shadow-2xl  rounded-2xl min-w-0">
+    <div className="h-full grid border-2 grid-cols-12 gap-6 p-6 shadow-xl  rounded-2xl min-w-0 bg-bg-card">
   {/* About Me Title */}
       <div className="col-span-12 inline-flex items-center gap-4 text-3xl">
         <UserRound className="scale-150 text-accent-green shrink-0" />

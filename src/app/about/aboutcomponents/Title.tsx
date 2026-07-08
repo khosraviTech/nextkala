@@ -5,10 +5,10 @@ import { ArrowRight, Download } from "lucide-react";
 
 export default function Title() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-6 p-6 border-2 shadow-2xl rounded-2xl">
+    <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-6 p-6 border-2 shadow-xl rounded-2xl bg-bg-card">
       {/* Image */}
       <div className="grid-cols-1  lg:col-span-5 flex items-center justify-center">
-        <div className="w-75 h-75 rounded-full overflow-hidden border-2 border-blue-950 shadow-lg">
+        <div className="w-75 h-75 rounded-full overflow-hidden border shadow-lg">
           <Image
             src="/Khosravi_cap.jpg"
             width={300}
@@ -52,7 +52,7 @@ export default function Title() {
                 behavior: "smooth",
               });
             }}
-            className=" cursor-pointer flex-1 inline-flex items-center justify-between p-4 text-xl bg-bg-dark border-2 border-accent-green rounded-full text-secondary"
+            className=" cursor-pointer flex-1 inline-flex items-center justify-between p-4 text-xl border-2 border-accent-green rounded-full text-secondary"
           >
             Contact Me
             <ArrowRight className="text-accent-green" />

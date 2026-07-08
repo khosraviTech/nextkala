@@ -26,7 +26,7 @@ type tool = {
 };
 const tools: tool[] = [
   { name: "Git", logoSrc: "/toolLogo/git-icon.svg" },
-  { name: "GitHub", logoSrc: "/toolLogo/github-white-icon.svg" },
+  { name: "GitHub", logoSrc: "/toolLogo/github-icon.svg" },
   { name: "VS Code", logoSrc: "/toolLogo/vsCode-icon.svg" },
   { name: "Ubuntu", logoSrc: "/toolLogo/Ubuntu-color-icon.svg" },
   { name: "Redux ToolKit", logoSrc: "/toolLogo/redux-icon.svg" },
@@ -43,7 +43,7 @@ const tools: tool[] = [
 export default function MySkills() {
 
   return (
-    <div className="h-full grid grid-cols-12 gap-6 p-6 shadow-2xl border-2 rounded-2xl">
+    <div className="h-full grid grid-cols-12 gap-6 p-6 shadow-xl border-2 rounded-2xl bg-bg-card">
       {/*  My Skills Title */}
       <div className="col-span-12 inline-flex items-center gap-5 text-3xl">
         <CodeXml className="scale-150 text-accent-green shrink-0" />
@@ -53,7 +53,7 @@ export default function MySkills() {
       {/* Front-end title */}
       <h2 className="col-span-6 text-3xl text-accent-green ">Front-end</h2>
       {/* Tools title */}
-      <h2 className="col-span-6 text-3xl text-warning-orange">Tools</h2>
+      <h2 className="col-span-6 text-3xl text-accent-green">Tools</h2>
        {/* Front-end skills list  */}
       <div className="col-span-5 flex flex-wrap items-center gap-6 mt-3">
         {skills.map((skill) => (
