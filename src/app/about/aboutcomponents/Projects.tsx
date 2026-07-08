@@ -25,7 +25,7 @@ const projects: project[] = [
 export default function Projects() {
   return (
     <>
-      <div className="border-2 border-accent-green rounded-3xl p-4 grid grid-cols-12 gap-6">
+      <div className="border-2 shadow-2xl rounded-3xl p-4 grid grid-cols-12 gap-6">
        
        
        

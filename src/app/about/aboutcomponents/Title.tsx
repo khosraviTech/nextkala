@@ -5,7 +5,7 @@ import { ArrowRight, Download } from "lucide-react";
 
 export default function Title() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-6 p-6 border-2 border-accent-green rounded-2xl">
+    <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-6 p-6 border-2 shadow-2xl rounded-2xl">
       {/* Image */}
       <div className="grid-cols-1  lg:col-span-5 flex items-center justify-center">
         <div className="w-75 h-75 rounded-full overflow-hidden border-2 border-blue-950 shadow-lg">

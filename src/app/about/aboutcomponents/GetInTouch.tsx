@@ -42,7 +42,7 @@ const connections: connection[] = [
 ];
 export default function GetInTouch() {
   return (
-    <div className="h-full grid grid-cols-12 gap-6  border-2 border-accent-green p-6 rounded-2xl">
+    <div className="h-full grid grid-cols-12 gap-6  border-2 shadow-2xl p-6 rounded-2xl">
       {/* title */}
       <div className=" col-span-4 text-3xl flex-col items-center  leading-tight mr-3 ">
         <span className=" space-y-3">
@@ -51,7 +51,7 @@ export default function GetInTouch() {
             <h1 className=" text-primary ">Get in Touch</h1>
           </span>
 
-          <h3 className="text-secondary text-sm">
+          <h3 className="text-secondary text-xl">
             Feel free to reach out for collaboration, networking, or just to say
             hello.
           </h3>

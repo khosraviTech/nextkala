@@ -2,15 +2,15 @@
 
 
 @theme {
-  --color-bg-dark: #06121c;
-  --color-bg-card: #021738;
+  --color-bg-dark: #ffffff;
+  --color-bg-card: #d6ccc2;
 
-  --color-primary: #ededf1;
-  --color-secondary: #d2d4d4;
+  --color-primary: #080708;
+  --color-secondary: #393d3f;
   
 
-  --color-accent-green: #4dc756;
-  --color-warning-orange: #dfab41;
+  --color-accent-green: #3772ff;
+  --color-warning-orange: #3772ff;
 
   --color-border: #57634e;
 }

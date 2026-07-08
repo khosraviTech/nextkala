@@ -44,7 +44,7 @@ export default function ProductList({ products }: { products: Product[] }) {
         {paginatedProducts.map((product) => (
           <div
             key={product.id}
-            className=" grid grid-cols-2 gap-5  border-border text-amber-50 text-center  bg-blue-950 p-5 outline-0 border-2 border-blue-950 rounded-3xl shadow-2xl  "
+            className=" grid grid-cols-2 gap-5   text-primary bg-bg-card p-5 outline-0 border-2  rounded-3xl shadow-2xl  "
           >
             <Link className="col-span-2" href={`/productDetails/${product.id}`}>
               <Image
@@ -112,7 +112,7 @@ export default function ProductList({ products }: { products: Product[] }) {
         <button
           onClick={() => goToPage(currentPage - 1)}
           disabled={currentPage === 1}
-          className=" cursor-pointer px-4 py-2 border rounded disabled:opacity-60 disabled:cursor-no-drop text-white"
+          className=" cursor-pointer px-4 py-2 border rounded disabled:opacity-60 disabled:cursor-no-drop text-primary"
         >
           Prev
         </button>
@@ -129,7 +129,7 @@ export default function ProductList({ products }: { products: Product[] }) {
               className={`w-10 h-10 rounded ${
                 pageNumber === currentPage
                   ? "bg-red-500 text-white"
-                  : "border hover:bg-gray-100 text-white"
+                  : "border hover:bg-gray-100 text-primary"
               }`}
             >
               {pageNumber}
@@ -142,7 +142,7 @@ export default function ProductList({ products }: { products: Product[] }) {
         <button
           onClick={() => goToPage(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="cursor-pointer px-4 py-2 border rounded disabled:opacity-60 text-white disabled:cursor-no-drop"
+          className="cursor-pointer px-4 py-2 border rounded disabled:opacity-60 text-primary disabled:cursor-no-drop"
         >
           Next
         </button>
