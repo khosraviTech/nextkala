@@ -29,12 +29,19 @@ export default function Title() {
 
         <h1 className="text-6xl text-warning-orange leading-tight">Khosravi</h1>
 
-        <h3 className="text-2xl text-accent-green">
-          <span className="font-bold text-warning-orange">|</span> Front-End
-          Developer
+        <h3 className="text-2xl text-accent-green font-medium inline-flex leading-0 items-center gap-4">
+          {/* <span className="font-bold text-[#57cc99] ">|</span>  */}
+          <Image
+            src="/skillLogo/3d-modeling-icon.svg"
+            width={20}
+            height={20}
+            alt="Picture of Front-end"
+            className="scale-150"
+          />
+          Front-End Developer
         </h3>
 
-        <p className="text-xl text-secondary">
+        <p className="text-xl text-secondary font-medium">
           I build modern and scalable web applications with a focus on usability
           and performance.
         </p>
@@ -48,7 +55,7 @@ export default function Title() {
           <button
             onClick={() => {
               window.scrollTo({
-                top: document.body.scrollHeight,
+                top: document.documentElement.scrollHeight,
                 behavior: "smooth",
               });
             }}

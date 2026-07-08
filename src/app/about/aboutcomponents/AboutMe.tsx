@@ -14,7 +14,7 @@ export default function AboutMe() {
 
 
 
-      <h3 className="col-span-12 text-secondary">
+      <h3 className="col-span-12 text-secondary font-medium">
         I&apos;m a passionate front-end developer who loves turning ideas into
         real products. I&apos;m constantly learning and exploring new
         technologies to solve real-world problems.

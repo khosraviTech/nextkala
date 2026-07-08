@@ -37,7 +37,7 @@ const connections: connection[] = [
     name: "Bale",
     address: "@mohmmd_khosravi",
     iconSrc: "/contactLogo/Bale-green.svg",
-    link: "",
+    link: "https://web.bale.ai",
   },
 ];
 export default function GetInTouch() {
@@ -51,7 +51,7 @@ export default function GetInTouch() {
             <h1 className=" text-primary ">Get in Touch</h1>
           </span>
 
-          <h3 className="text-secondary text-xl">
+          <h3 className="text-secondary text-xl font-medium ">
             Feel free to reach out for collaboration, networking, or just to say
             hello.
           </h3>
@@ -66,7 +66,7 @@ export default function GetInTouch() {
         {connections.map((connection) => (
           <div
             key={connection.name}
-            className=" border border-border rounded-2xl text-primary p-3"
+            className=" border-2 rounded-2xl text-primary p-3"
           >
             <Link href={connection.link}>
               <div className="inline-flex items-center gap-2">

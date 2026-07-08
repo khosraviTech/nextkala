@@ -8,7 +8,7 @@ import Projects from "./aboutcomponents/Projects";
 
 export default function About() {
   return (
-    <div className="grid  lg:grid-cols-12  lg:gap-6 gap-5  bg-bg-dark p-6">
+    <div className="grid  lg:grid-cols-12  lg:gap-4 gap-5   p-6">
   <div className=" col-span-1    lg:col-span-8">
     <Title />
   </div>

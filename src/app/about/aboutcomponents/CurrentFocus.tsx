@@ -57,7 +57,7 @@ export default function CurrentFocus() {
           Currently Learning
         </h2>
 
-        <ul className="list-disc pl-6 marker:text-accent-green space-y-3">
+        <ul className="list-disc pl-6 marker:text-accent-green space-y-3 font-medium">
           {currentLearnings.map((item) => (
             <li key={item.name} className="text-primary text-lg">
               {item.name}
@@ -77,7 +77,7 @@ export default function CurrentFocus() {
           Future Interests
         </h2>
 
-        <ul className="space-y-13">
+        <ul className="space-y-13 font-medium">
           {futureInterests.map((item) => (
             <li
               key={item.name}

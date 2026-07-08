@@ -70,7 +70,7 @@ export default function MySkills() {
               
             />
 
-            <h3 className="text-xl text-secondary">{skill.name}</h3>
+            <h3 className="text-xl text-secondary font-medium">{skill.name}</h3>
           </div>
         ))}
       </div>
@@ -92,7 +92,7 @@ export default function MySkills() {
               className="p-2"
             />
 
-            <h3 className="text-xl text-secondary">{tool.name}</h3>
+            <h3 className="text-xl text-secondary font-medium">{tool.name}</h3>
           </div>
         ))}
       </div>
