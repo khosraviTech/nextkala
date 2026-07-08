@@ -33,8 +33,8 @@ export default function Cart() {
       <div className="max-lg:grid-cols-2 grid grid-cols-12 gap-6 p-12 h-full ">
         {/* title of page */}
         <div className=" ml-3 col-span-12 max-lg:col-span-2">
-          <h1 className="inline-flex items-center gap-2 text-primary text-4xl mb-3">
-            <ShoppingCart className="text-accent-green" />
+          <h1 className="inline-flex items-center gap-3 text-primary text-4xl mb-3">
+            <ShoppingCart className="scale-150 text-accent-green" />
             Your Cart
           </h1>
           <h3 className="text-secondary text-xl">
@@ -125,14 +125,14 @@ export default function Cart() {
           {/* footer of product list */}
           <div className="col-span-12 flex justify-between items-center ">
             <Link href="/">
-              <button className="cursor-pointer inline-flex items-center gap-2 p-3 rounded-2xl border-2 border-border text-secondary">
+              <button className="cursor-pointer inline-flex items-center gap-2 p-3 rounded-2xl border-2 border-border text-secondary  hover:text-white hover:border-accent-green hover:bg-accent-green">
                 <MoveLeft />
                 continue shopping
               </button>
             </Link>
             <button 
               onClick={() => dispatch(cleanCart())}
-              className="cursor-pointer inline-flex items-center gap-2 p-3 rounded-2xl border-2 border-border text-secondary"
+              className="cursor-pointer inline-flex items-center gap-2 p-3 rounded-2xl border-2 border-border text-secondary  hover:text-white hover:border-red-600 hover:bg-red-600"
             >
               clear Cart
               <Trash2 className="scale-80" />

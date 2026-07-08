@@ -76,7 +76,7 @@ export default function ProductList({ products }: { products: Product[] }) {
                   }),
                 )
               }
-              className="cursor-pointer flex items-center gap-2 rounded-2xl px-4 py-2 hover:text-accent-green border-2"
+              className="cursor-pointer flex items-center gap-2 rounded-2xl px-4 py-2 hover:text-white hover:border-accent-green hover:bg-accent-green border-2"
             >
               <ShoppingCart size={18} />
               Add to Cart
@@ -96,7 +96,7 @@ export default function ProductList({ products }: { products: Product[] }) {
                   }),
                 );
               }}
-              className="cursor-pointer p-2 rounded-2xl hover:text-pink-600 border-2 flex items-center gap-2"
+              className="cursor-pointer p-2 rounded-2xl hover:bg-pink-600 hover:text-white hover:border-pink-600 border-2 flex items-center gap-2"
             >
               <Heart className="h-5 w-5" />
               Add to Wish list
