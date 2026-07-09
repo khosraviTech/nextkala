@@ -1,42 +1,12 @@
-import AboutMe from "./aboutcomponents/AboutMe";
-import GetInTouch from "./aboutcomponents/GetInTouch";
-import CurrentFocus from "./aboutcomponents/CurrentFocus";
-import Education from "./aboutcomponents/Education";
-import MySkills from "./aboutcomponents/MySkills";
-import Title from "./aboutcomponents/Title";
-import Projects from "./aboutcomponents/Projects";
 
 export default function About() {
   return (
-    <div className="grid  lg:grid-cols-12  lg:gap-4 gap-5   p-6">
-  <div className=" col-span-1    lg:col-span-8">
-    <Title />
-  </div>
-
-  <div className=" col-span-1   lg:col-span-4">
-    <Education />
-  </div>
-
-  <div className=" col-span-1   lg:col-span-4">
-    <AboutMe />
-  </div>
-
-  <div className=" col-span-1   lg:col-span-8 ">
-    <CurrentFocus />
-  </div>
-
-  <div className=" col-span-1  lg:col-span-12">
-    <MySkills />
-  </div>
-
-  <div className="col-span-1  lg:col-span-12">
-    <Projects/>
-  </div>
-
-  <div className=" col-span-1  lg:col-span-12 ">
-    <GetInTouch />
-  </div>
-</div>
+  <iframe
+  src="https://khosravi.vercel.app"
+  width="100%"
+  height="1000"
+  className="border-0"
+/>
    
   );
 }
