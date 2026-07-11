@@ -24,15 +24,15 @@ export default function OrderPage(props: { orderId: string }) {
         </div>
 
         {/* checkout  */}
-        <div className="grid grid-cols-12 gap-6 p-6 col-span-12  border-border border-2 rounded-3xl bg-bg-card">
+        <div className="grid grid-cols-12 gap-6 p-6 col-span-12  border-[#B7B0A8] border-2 rounded-3xl bg-bg-card">
           <div className="col-span-12 flex justify-between text-2xl">
-            <h4 className="text-primary">Order number</h4>
-            <h4 className="text-accent-green ">{newOrder?.orderId}</h4>
+            <h4 className="text-primary font-medium">Order number</h4>
+            <h4 className="text-accent-green  font-medium">{newOrder?.orderId}</h4>
           </div>
 
           <div className="col-span-12 flex justify-between text-2xl">
-            <h4 className="text-primary">Date</h4>
-            <h4 className="text-accent-green ">
+            <h4 className="text-primary font-medium">Date</h4>
+            <h4 className="text-accent-green  font-medium">
               {newOrder?.createdAt.split("T")[0]}
             </h4>
           </div>
@@ -40,32 +40,32 @@ export default function OrderPage(props: { orderId: string }) {
           <div className="col-span-12   text-2xl ">
             {newOrder?.items.map((item) => (
               <div key={item.title} className="flex justify-between ">
-                <h4 className="text-primary  pt-4">
+                <h4 className="text-primary  pt-4 font-medium">
                   {item.title} x{item.quantity}
                 </h4>
-                <h4 className="text-accent-green">${item.totalItemPrice}</h4>
+                <h4 className="text-accent-green font-medium">${item.totalItemPrice}</h4>
               </div>
             ))}
           </div>
 
           <div className="col-span-12 flex justify-between text-2xl">
-            <h4 className="text-primary">subtotal</h4>
-            <h4 className="text-accent-green ">${newOrder?.subtotal}</h4>
+            <h4 className="text-primary font-medium">subtotal</h4>
+            <h4 className="text-accent-green  font-medium">${newOrder?.subtotal}</h4>
           </div>
 
           <div className="col-span-12 flex justify-between text-2xl">
-            <h4 className="text-primary">shipping</h4>
-            <h4 className="text-accent-green ">$10</h4>
+            <h4 className="text-primary font-medium">shipping</h4>
+            <h4 className="text-accent-green  font-medium">$10</h4>
           </div>
 
           <div className="col-span-12 flex justify-between text-2xl">
-            <h4 className="text-primary">Tax</h4>
-            <h4 className="text-accent-green ">{newOrder?.tax}</h4>
+            <h4 className="text-primary font-medium">Tax</h4>
+            <h4 className="text-accent-green  font-medium">{newOrder?.tax}</h4>
           </div>
 
           <div className="col-span-12 flex justify-between text-2xl">
-            <h4 className="text-primary">Total</h4>
-            <h4 className="text-accent-green ">${newOrder?.total}</h4>
+            <h4 className="text-primary font-medium">Total</h4>
+            <h4 className="text-accent-green  font-medium">${newOrder?.total}</h4>
           </div>
         </div>
       </div>
