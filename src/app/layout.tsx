@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body className="bg-bg-dark">
+      <body className="bg-bg-">
         
         <StoreProvider> 
               <div className="sticky top-0 z-50"> 

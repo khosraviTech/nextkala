@@ -2,14 +2,14 @@
 
 
 @theme {
-  --color-bg-dark: #ffffff;
+  --color-bg-dark: #F5F2ED;
   --color-bg-card: #d6ccc2;
 
   --color-primary: #080708;
   --color-secondary: #393d3f;
   
 
-  --color-accent-green: #2600ff;
+  --color-accent-green: #2563EB; /* #2600ff   #000080  #2563EB*/
   --color-warning-orange: #3772ff;
 
   --color-border: #57634e;
