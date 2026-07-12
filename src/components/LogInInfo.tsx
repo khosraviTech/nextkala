@@ -27,10 +27,11 @@ export default function LogInInfo() {
             </button>
           </DropdownMenu.Trigger>
 
-          <DropdownMenu.Portal>
-            <DropdownMenu.Content className="grid gap-3  text-primary border-2 rounded-b-3xl p-6 bg-bg-dark">
-              <DropdownMenu.Item className="text-xl m-2 ">
-                <Link href="/profile">profile</Link>
+          <DropdownMenu.Portal >
+            <DropdownMenu.Content className="grid gap-3  text-primary border rounded-b-3xl p-6 bg-bg-dark">
+
+              <DropdownMenu.Item className="text-xl m-2 hover:border-none">
+                <Link href="/profile"  >profile</Link>
               </DropdownMenu.Item>
 
               <DropdownMenu.Item className="text-xl m-2 ">

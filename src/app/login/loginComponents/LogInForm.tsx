@@ -100,13 +100,13 @@ export default function LogInForm() {
         <div className="w-full">
           <button
             type="submit"
-            className=" cursor-pointer border-2 rounded-4xl m-1 p-1 w-full h-10 hover:bg-blue-700"
+            className=" cursor-pointer border-2 rounded-4xl m-1 p-1 w-full h-10 hover:bg-blue-700 "
           >
             LogIn
           </button>
           {/* Error message */}
           {error && (
-            <div className="bg-red-50 text-red-500 p-3 rounded mb-4 text-sm">
+            <div className="bg-red-500 text-white p-3 rounded mb-4 text-sm">
               {error}
             </div>
           )}
