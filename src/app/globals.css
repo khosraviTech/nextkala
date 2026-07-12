@@ -12,8 +12,11 @@
   --color-accent-green: #2563EB; /* #2600ff   #000080  #2563EB*/
   --color-warning-orange: #3772ff;
 
-  --color-border: #57634e;
+ --color-border: #B7B0A8; /* #B7B0A8   #57634e*/
+
 }
+
+
 html, body {
   height: 100%;
   margin: 0;
