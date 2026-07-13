@@ -116,7 +116,7 @@ export default function LogInForm() {
         <button
           type="button"
           onClick={handleGoogleLogin}
-          className="cursor-pointer w-full flex items-center justify-center gap-3 px-4 py-2 border rounded-lg hover:bg-blue-700 transition mt-2"
+          className="cursor-pointer w-full flex items-center justify-center gap-3 px-4 py-2 border rounded-lg  transition mt-2  hover:bg-accent-green hover:text-white hover:border-accent-green"
         >
           <svg className="w-5 h-5" viewBox="0 0 48 48">
             <path
