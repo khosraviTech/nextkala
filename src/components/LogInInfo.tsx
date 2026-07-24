@@ -21,7 +21,7 @@ export default function LogInInfo() {
                   width={30}
                   height={30}
                   // TODO: fix image hight when logged in with gmail.
-                  className="w-7.5 h-7.5 "
+                  className="w-7.5 h-7.5"
                   
                 />
               </div>
