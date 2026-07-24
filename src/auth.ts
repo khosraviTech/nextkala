@@ -32,13 +32,7 @@ export default NextAuth({
             user.email === credentials.email &&
             user.password === credentials.password
         );
-        if (email === "1@1" && password === "1") {
-          return {
-            id: "admin1",
-            name: "Demo User",
-            email: "demo@nextkala.com",
-          };
-        }
+      
 
         if (!user) {
           return null;
