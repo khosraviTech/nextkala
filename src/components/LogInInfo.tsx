@@ -14,7 +14,7 @@ export default function LogInInfo() {
         <DropdownMenu.Root>
           <DropdownMenu.Trigger asChild>
             <button className="cursor-pointer flex items-center gap-2 ">
-              <div className="w-[30px] h-[30px] rounded-full overflow-hidden border-3 border-black shadow-lg" >
+              <div className="rounded-full overflow-hidden border-3 border-black shadow-lg" >
                 <Image
                   src={session.user.image!.toString()}
                   alt={`${session.user.name} image`}
