@@ -2,11 +2,32 @@
 import { useSession } from "next-auth/react";
 export default function Dashboard() {
     const { data: session } = useSession()
-    return (<div className="p-3">
+    return (<div className="p-3 grid    grid-cols-12 gap-6">
         {/* welcome title */}
-        <div ><h1 className="font-bold"><span className="text-[#c9a57d] font-bold"> WELCOME BACK, </span>{session?.user.name?.toUpperCase()} !</h1></div>
-        <div className="gird grid-cols-12">
-            <div></div>
+        <div className="col-span-full"><h1 className="font-bold"><span className="text-[#c9a57d] font-bold"> WELCOME BACK, </span>{session?.user.name?.toUpperCase()} !</h1></div>
+        {/* row 1 */}
+        <div className="col-span-12 grid grid-cols-12 gap-3">
+            <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+            <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+            <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+            <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+        </div>
+        {/* row 2 */}
+        <div className="col-span-12 grid grid-cols-13 gap-3">
+            <div className="col-span-5 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+            <div className="col-span-4 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+            <div className="col-span-4 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+
+        </div>
+        {/* row 3 */}
+        <div className="col-span-12 grid grid-cols-12 gap-3">
+            <div className="col-span-5 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+            <div className="col-span-7 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+        </div>
+        {/* row 4 */}
+        <div className="col-span-12 grid grid-cols-12 gap-3">
+            <div className="col-span-12 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+            
         </div>
     </div>)
 }
