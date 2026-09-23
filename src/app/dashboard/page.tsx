@@ -1,17 +1,18 @@
 'use client'
 import { useSession } from "next-auth/react";
 import { Wallet } from 'lucide-react';
-
+import { ShoppingCart } from 'lucide-react';
 export default function Dashboard() {
     const { data: session } = useSession()
     return (<div className="p-3 grid    grid-cols-12 gap-6">
         {/* welcome title */}
         <div className="col-span-full"><h1 className="font-bold"><span className="text-[#c9a57d] font-bold"> WELCOME BACK, </span>{session?.user.name?.toUpperCase()} !</h1></div>
         {/* row 1 */}
+
         <div className="col-span-12 grid grid-cols-12 gap-3">
-            
+            {/* wallet div */}
             <div className="col-span-3 grid grid-cols-3 bg-[#f3debd] border-2 p-3 rounded-xl">
-                <Wallet className="col-span-1 bg-[#a18464] rounded  scale-190 m-3" />
+                <Wallet className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
                 {/* text */}
                 <div className="flex flex-col items-center">
                     <h6 className="text-[#73685c]">Total Spent</h6>
@@ -20,7 +21,12 @@ export default function Dashboard() {
 
 
             </div>
-            <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
+            {/* order div */}
+            <div className="col-span-3 grid grid-cols-3 bg-[#f3debd] border-2 p-3 rounded-xl">
+                <ShoppingCart  className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
+                {/* text */}
+                
+            </div>
             <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
             <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
         </div>
