@@ -14,9 +14,9 @@ export default function Dashboard() {
             <div className="col-span-3 grid grid-cols-3 bg-[#f3debd] border-2 p-3 rounded-xl">
                 <Wallet className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
                 {/* text */}
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-start">
                     <h6 className="text-[#73685c]">Total Spent</h6>
-                    <h6 className="text-2xl">$ 134.22</h6>
+                    <h6 className="text-2xl">$134.22</h6>
                 </div>
 
 
@@ -25,8 +25,9 @@ export default function Dashboard() {
             <div className="col-span-3 grid grid-cols-3 bg-[#f3debd] border-2 p-3 rounded-xl">
                 <ShoppingCart  className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
                 {/* text */}
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-start">
                     <h6 className="text-[#73685c]">Total Orders</h6>
+                    <h6 className="text-2xl">3</h6>
                     
                 </div>
             </div>
