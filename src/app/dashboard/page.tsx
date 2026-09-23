@@ -25,7 +25,10 @@ export default function Dashboard() {
             <div className="col-span-3 grid grid-cols-3 bg-[#f3debd] border-2 p-3 rounded-xl">
                 <ShoppingCart  className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
                 {/* text */}
-                
+                <div className="flex flex-col items-center">
+                    <h6 className="text-[#73685c]">Total Orders</h6>
+                    
+                </div>
             </div>
             <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
             <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
