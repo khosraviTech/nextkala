@@ -9,9 +9,15 @@ export default function Dashboard() {
         <div className="col-span-full"><h1 className="font-bold"><span className="text-[#c9a57d] font-bold"> WELCOME BACK, </span>{session?.user.name?.toUpperCase()} !</h1></div>
         {/* row 1 */}
         <div className="col-span-12 grid grid-cols-12 gap-3">
+            
             <div className="col-span-3 grid grid-cols-3 bg-[#f3debd] border-2 p-3 rounded-xl">
                 <Wallet className="col-span-1 bg-[#a18464] rounded  scale-190 m-3" />
-                <h6 className="text-[#73685c]">Total Spent</h6>
+                {/* text */}
+                <div className="flex flex-col items-center">
+                    <h6 className="text-[#73685c]">Total Spent</h6>
+                    <h6 className="text-2xl">$ 134.22</h6>
+                </div>
+
 
             </div>
             <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
