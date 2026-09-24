@@ -33,12 +33,12 @@ export default function Dashboard() {
             </div>
 
              {/*average order div */}
-            <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl">
+            <div className="col-span-3 grid grid-cols-3 bg-[#f3debd] border-2 p-3 rounded-xl">
                 <ChartNoAxesColumn className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
                 {/* text */}
                 <div className="flex flex-col items-start">
                     <h6 className="text-[#73685c]">Average Order Value</h6>
-                    
+                    <h6 className="text-2xl">$134.22</h6>
                 </div>
 
             </div>
