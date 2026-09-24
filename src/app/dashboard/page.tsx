@@ -37,8 +37,8 @@ export default function Dashboard() {
                 <ChartNoAxesColumn className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
                 {/* text */}
                 <div className="flex flex-col items-start">
-                    <h6 className="text-[#73685c]">Average Order Value</h6>
-                    <h6 className="text-2xl">$134.22</h6>
+                    <h6 className="text-[#73685c] whitespace-nowrap">Average Order Value</h6>
+                    <h6 className="text-2xl">$44.22</h6>
                 </div>
 
             </div>
