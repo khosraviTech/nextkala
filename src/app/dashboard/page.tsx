@@ -45,8 +45,9 @@ export default function Dashboard() {
             </div>
 
             {/*Total ordpurchased div */}
-            <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl">
+            <div className="col-span-3 grid grid-cols-3 bg-[#f3debd] border-2 p-3 rounded-xl">
                 <Package className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
+                
             </div>
 
         </div>
