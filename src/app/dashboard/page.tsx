@@ -3,12 +3,13 @@ import { useSession } from "next-auth/react";
 import { Wallet } from 'lucide-react';
 import { ShoppingCart } from 'lucide-react';
 import { ChartNoAxesColumn } from 'lucide-react';
+import { Package } from 'lucide-react';
 export default function Dashboard() {
     const { data: session } = useSession()
     return (<div className="p-3 grid    grid-cols-12 gap-6">
         {/* welcome title */}
         <div className="col-span-full"><h1 className="font-bold"><span className="text-[#c9a57d] font-bold"> WELCOME BACK, </span>{session?.user.name?.toUpperCase()} !</h1></div>
-        
+
         {/* row 1 */}
         <div className="col-span-12 grid grid-cols-12 gap-3">
 
@@ -32,7 +33,7 @@ export default function Dashboard() {
                 </div>
             </div>
 
-             {/*average order div */}
+            {/*average order div */}
             <div className="col-span-3 grid grid-cols-3 bg-[#f3debd] border-2 p-3 rounded-xl">
                 <ChartNoAxesColumn className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
                 {/* text */}
@@ -43,9 +44,11 @@ export default function Dashboard() {
 
             </div>
 
+            {/*Total ordpurchased div */}
+            <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl">
+                <Package className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
+            </div>
 
-            <div className="col-span-3 bg-[#f3debd] border-2 p-3 rounded-xl"></div>
-            
         </div>
 
 
