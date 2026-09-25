@@ -49,7 +49,7 @@ export default function Dashboard() {
                 <Package className="col-span-1 bg-[#c9ab89] rounded  scale-190 m-3" />
                 <div className="flex flex-col items-start">
                     <h6 className="text-[#73685c] whitespace-nowrap">Total item purchased</h6>
-                    
+                    <h6 className="text-2xl">7</h6>
                 </div>
             </div>
 
