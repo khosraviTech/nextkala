@@ -9,13 +9,10 @@ export default function Dashboard() {
     if (true){
         return(
             <div className="grid grid-cols-12">
-                <div></div>
+                <div><h1>Comming soon...</h1></div>
             </div>
         )
     }
-
-
-    
     return (<div className="p-3 grid    grid-cols-12 gap-6">
         {/* welcome title */}
         <div className="col-span-full"><h1 className="font-bold"><span className="text-[#c9a57d] font-bold"> WELCOME BACK, </span>{session?.user.name?.toUpperCase()} !</h1></div>
