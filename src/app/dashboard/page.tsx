@@ -6,10 +6,13 @@ import { ChartNoAxesColumn } from 'lucide-react';
 import { Package } from 'lucide-react';
 export default function Dashboard() {
     const { data: session } = useSession()
-    if (true){
-        return(
-            <div className="grid grid-cols-12">
-                <div><h1>Comming soon...</h1></div>
+    if (true) {
+        return (
+            <div className="flex items-center justify-center   h-screen">
+                <div className=" border-2  border-[#5f5a55] rounded-4xl bg-[#f3debd]  ">
+                    <h1
+                        className="text-[#573f25] p-20 text-6xl font-serif"
+                    >Comming soon...</h1></div>
             </div>
         )
     }
